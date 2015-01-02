@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Hasan Ozgan - Internet Stratejileri ve Yazılım Mimarileri Üzerine</title>
+    
+    <meta name="author" content="Hasan Ozgan">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/heves/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="/assets/themes/heves/css/docs.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/heves/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="/assets/themes/heves/css/followbox.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Le fav and touch icons -->
+    <!-- Update these with your own images
+      <link rel="shortcut icon" href="images/favicon.ico">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+<a href="http://www.reactivemanifesto.org/"><img style="border: 0; position: fixed; right: 0; top:41px; z-index: 9000" src="http://www.reactivemanifesto.org/images/ribbons/we-are-reactive-red-right.png"></a> 
+    <div class="navbar-inner">
+        <div class="container" style="width:1200px">
+           <a class="brand" href="/">Internet Stratejileri, Yazılım Geliştirme ve Mimarileri Üzerine</a>
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li>
+                        <a href="/"><i class="icon-home"></i> Anasayfa</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-briefcase"></i> Belgeler <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        	<li><a href="/blog/2013/03/30/fonksiyonel-programlama/" target="_blank">Fonksiyonel Programlama</a></li>
+                            <li><a href="/belgeler/scala-rehberi" rel="tooltip" title="Scala Rehberi" target="_blank">Scala Rehberi</a></li>
+                            <li><a href="/belgeler/tasarim-desenleri" rel="tooltip" title="Tasarım Desenleri" target="_blank">Tasarım Desenleri</a></li>
+                            <li><a href="/belgeler/tasarim-prensipleri" rel="tooltip" title="Tasarım Prensipleri" target="_blank">Tasarım Prensipleri</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://github.com/HasanOzgan"><i class="icon-globe"></i> Projeler</a>
+                    </li>
+                    <li><a href="/archive"><i class="icon-folder-open"></i> Arşiv</a></li>
+                    <li>
+                        <a href="/hakkinda"><i class="icon-user"></i> Hakkımda</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="marketing">
+        <div class="content">
+            
+
+<div class="row">
+    <div class="span4 columns">
+        <div class="row">
+            <div class="span1" style="width:80px"><img src="avatar.png" alt="Hasan Ozgan" title="Sr. Software Engineer" class="img-rounded floatLeft"></div>
+            <div class="span3" style="text-align:left; margin-left:20px; width:240px;">
+                <span style="display:block;font-size:22px;line-height:34px;">Hasan Ozgan</span>
+                <span style="display:block;font-size:16px;">Sr. Software Engineer</span>
+
+                <ul class="buttons unstyled"  style="margin-top: 5px;">
+                    <li><a href="http://feeds.feedburner.com/HasanOzgan" rel="me" class="social rss" title="Go to feedburner Hasan Ozgan RSS feed" target="_blank"></a></li>
+                    <li><a href="mailto:hasanozgan+feedback@gmail.com" rel="me" class="social mail" title="Get in touch"  target="_blank"></a></li>
+                    <li><a href="http://www.twitter.com/HasanOzgan" rel="me" class="social twitter" title="Go to twitter.com/HasanOzgan" target="_blank"></a></li>
+                    <li><a href="https://plus.google.com/111166748006147756880?rel=author" rel="author" class="social gplus" title="Go to Google Plus profile" target="_blank"></a></li>
+                    <li><a href="http://github.com/HasanOzgan" rel="me" class="social github" title="Go to github.com/HasanOzgan" target="_blank"></a></li>
+                    <li><a href="http://www.linkedin.com/in/HasanOzgan" rel="me" class="social linkedin" title="Go to LinkedIn profile" target="_blank"></a></li>
+                </ul>
+            </div>
+        </div>
+        <p style="margin: 20px 0 20px 0;">
+            Linux/Unix sistemleri üzerinde Java, Scala, Ruby, JavaScript, PHP gibi dillerle WEB uygulamaları geliştiren, nesne yönelimli ve fonksiyonal programlama paradigmalarını bilen, çevik yazılım geliştirme süreçlerini uygulayan Scalability, Cloud-Computing, Machine-Learning / Collective-Intelligence konularıyla ilgili bir yazılım mühendisiyim.
+        </p>
+
+        <div id="twitter-area"></div>
+
+        <h3>Sayfalar</h3>
+        <ul class="nav nav-list" style="margin:0; padding: 0;">
+            <li><a href="/archive"><i class="icon-folder-open"></i> Blog Arşivi</a></li>
+            <li class="divider-vertical"></li>
+            <li><a href="/sitemap.txt"><i class="icon-align-center"></i> Site Haritası</a></li>
+        </ul>
+
+        <br/>
+        <br/>
+    </div>
+    <div class="span8 columns">
+        <h3 style="margin-left:-35px; margin-top:-5px; color:#B22;font-weight: bold;">~$ tac /var/log/mind | more</h3>
+        
+        <div class="row">
+            <div class="span8" style="padding: 15px 0 15px 0; border-bottom:1px solid #f4f4f4;">
+                <h4><strong><a href="/blog/2013/03/30/fonksiyonel-programlama">Fonksiyonel Programlama</a></strong></h4>
+                <p>
+                    <i class="icon-calendar"></i> Mart 30, 2013
+<!--                    | <i class="icon-comment"></i> <a href="/blog/2013/03/30/fonksiyonel-programlama#disqus_thread" data-disqus-identifier="/blog/2013/03/30/fonksiyonel-programlama">Yorumlar</a> -->
+
+                    
+                    | <i class="icon-tags"></i> Etiketler :
+                        
+                            <a href="tag/first-class citizen" rel="tooltip" title="View posts tagged with &quot;first-class citizen&quot;"><span class="label label-info">first-class citizen</span></a>
+                        
+                            <a href="tag/scala" rel="tooltip" title="View posts tagged with &quot;scala&quot;"><span class="label label-info">scala</span></a>
+                        
+                            <a href="tag/currying" rel="tooltip" title="View posts tagged with &quot;currying&quot;"><span class="label label-info">currying</span></a>
+                        
+                            <a href="tag/closure" rel="tooltip" title="View posts tagged with &quot;closure&quot;"><span class="label label-info">closure</span></a>
+                        
+                            <a href="tag/lambda express" rel="tooltip" title="View posts tagged with &quot;lambda express&quot;"><span class="label label-info">lambda express</span></a>
+                        
+                    
+                </p>
+                <p><a href="/blog/2013/03/30/fonksiyonel-programlama">Yazıyı Oku</a></p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span8" style="padding: 15px 0 15px 0; border-bottom:1px solid #f4f4f4;">
+                <h4><strong><a href="/blog/2013/03/22/du-bakalim-nolecak">Du Bakalım N'Olecak?</a></strong></h4>
+                <p>
+                    <i class="icon-calendar"></i> Mart 22, 2013
+<!--                    | <i class="icon-comment"></i> <a href="/blog/2013/03/22/du-bakalim-nolecak#disqus_thread" data-disqus-identifier="/blog/2013/03/22/du-bakalim-nolecak">Yorumlar</a> -->
+
+                    
+                    | <i class="icon-tags"></i> Etiketler :
+                        
+                            <a href="tag/turkiye" rel="tooltip" title="View posts tagged with &quot;turkiye&quot;"><span class="label label-info">turkiye</span></a>
+                        
+                            <a href="tag/oyku" rel="tooltip" title="View posts tagged with &quot;oyku&quot;"><span class="label label-info">oyku</span></a>
+                        
+                            <a href="tag/aziz nesin" rel="tooltip" title="View posts tagged with &quot;aziz nesin&quot;"><span class="label label-info">aziz nesin</span></a>
+                        
+                            <a href="tag/du bakalim nolucak" rel="tooltip" title="View posts tagged with &quot;du bakalim nolucak&quot;"><span class="label label-info">du bakalim nolucak</span></a>
+                        
+                    
+                </p>
+                <p><a href="/blog/2013/03/22/du-bakalim-nolecak">Yazıyı Oku</a></p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span8" style="padding: 15px 0 15px 0; border-bottom:1px solid #f4f4f4;">
+                <h4><strong><a href="/blog/2012/07/22/bir-startup-masali-bezirgan-ve-origami-ustasi">Bir Startup Masalı: Bezirgan ve Origami Ustası</a></strong></h4>
+                <p>
+                    <i class="icon-calendar"></i> Temmuz 22, 2012
+<!--                    | <i class="icon-comment"></i> <a href="/blog/2012/07/22/bir-startup-masali-bezirgan-ve-origami-ustasi#disqus_thread" data-disqus-identifier="/blog/2012/07/22/bir-startup-masali-bezirgan-ve-origami-ustasi">Yorumlar</a> -->
+
+                    
+                    | <i class="icon-tags"></i> Etiketler :
+                        
+                            <a href="tag/e-ticaret" rel="tooltip" title="View posts tagged with &quot;e-ticaret&quot;"><span class="label label-info">e-ticaret</span></a>
+                        
+                            <a href="tag/internet" rel="tooltip" title="View posts tagged with &quot;internet&quot;"><span class="label label-info">internet</span></a>
+                        
+                            <a href="tag/türkiye" rel="tooltip" title="View posts tagged with &quot;türkiye&quot;"><span class="label label-info">türkiye</span></a>
+                        
+                    
+                </p>
+                <p><a href="/blog/2012/07/22/bir-startup-masali-bezirgan-ve-origami-ustasi">Yazıyı Oku</a></p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span8" style="padding: 15px 0 15px 0; border-bottom:1px solid #f4f4f4;">
+                <h4><strong><a href="/blog/2012/02/01/is-ilani-java-developer">İş İlanı: Java Developer</a></strong></h4>
+                <p>
+                    <i class="icon-calendar"></i> Şubat 01, 2012
+<!--                    | <i class="icon-comment"></i> <a href="/blog/2012/02/01/is-ilani-java-developer#disqus_thread" data-disqus-identifier="/blog/2012/02/01/is-ilani-java-developer">Yorumlar</a> -->
+
+                    
+                    | <i class="icon-tags"></i> Etiketler :
+                        
+                            <a href="tag/Diğer" rel="tooltip" title="View posts tagged with &quot;Diğer&quot;"><span class="label label-info">Diğer</span></a>
+                        
+                    
+                </p>
+                <p><a href="/blog/2012/02/01/is-ilani-java-developer">Yazıyı Oku</a></p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span8" style="padding: 15px 0 15px 0; border-bottom:1px solid #f4f4f4;">
+                <h4><strong><a href="/blog/2011/10/13/buyuk-ustaya-saygiyla-1941-2011">Büyük Ustaya Saygıyla (1941 - 2011) !...</a></strong></h4>
+                <p>
+                    <i class="icon-calendar"></i> Ekim 13, 2011
+<!--                    | <i class="icon-comment"></i> <a href="/blog/2011/10/13/buyuk-ustaya-saygiyla-1941-2011#disqus_thread" data-disqus-identifier="/blog/2011/10/13/buyuk-ustaya-saygiyla-1941-2011">Yorumlar</a> -->
+
+                    
+                    | <i class="icon-tags"></i> Etiketler :
+                        
+                            <a href="tag/c programming language" rel="tooltip" title="View posts tagged with &quot;c programming language&quot;"><span class="label label-info">c programming language</span></a>
+                        
+                            <a href="tag/dennis ritchie" rel="tooltip" title="View posts tagged with &quot;dennis ritchie&quot;"><span class="label label-info">dennis ritchie</span></a>
+                        
+                            <a href="tag/Diğer" rel="tooltip" title="View posts tagged with &quot;Diğer&quot;"><span class="label label-info">Diğer</span></a>
+                        
+                    
+                </p>
+                <p><a href="/blog/2011/10/13/buyuk-ustaya-saygiyla-1941-2011">Yazıyı Oku</a></p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span8" style="padding: 15px 0 15px 0; border-bottom:1px solid #f4f4f4;">
+                <h4><strong><a href="/blog/2011/03/16/squerylin-yaraticisi-maxime-levesque-ile-bulustuk">Squeryl'in Yaratıcısı Maxime Lévesque ile Buluştuk</a></strong></h4>
+                <p>
+                    <i class="icon-calendar"></i> Mart 16, 2011
+<!--                    | <i class="icon-comment"></i> <a href="/blog/2011/03/16/squerylin-yaraticisi-maxime-levesque-ile-bulustuk#disqus_thread" data-disqus-identifier="/blog/2011/03/16/squerylin-yaraticisi-maxime-levesque-ile-bulustuk">Yorumlar</a> -->
+
+                    
+                    | <i class="icon-tags"></i> Etiketler :
+                        
+                            <a href="tag/Diğer" rel="tooltip" title="View posts tagged with &quot;Diğer&quot;"><span class="label label-info">Diğer</span></a>
+                        
+                            <a href="tag/gökhan goralı" rel="tooltip" title="View posts tagged with &quot;gökhan goralı&quot;"><span class="label label-info">gökhan goralı</span></a>
+                        
+                            <a href="tag/maxime levesque" rel="tooltip" title="View posts tagged with &quot;maxime levesque&quot;"><span class="label label-info">maxime levesque</span></a>
+                        
+                            <a href="tag/mihrimah sultan" rel="tooltip" title="View posts tagged with &quot;mihrimah sultan&quot;"><span class="label label-info">mihrimah sultan</span></a>
+                        
+                            <a href="tag/onur yalazı" rel="tooltip" title="View posts tagged with &quot;onur yalazı&quot;"><span class="label label-info">onur yalazı</span></a>
+                        
+                    
+                </p>
+                <p><a href="/blog/2011/03/16/squerylin-yaraticisi-maxime-levesque-ile-bulustuk">Yazıyı Oku</a></p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span8" style="padding: 15px 0 15px 0; border-bottom:1px solid #f4f4f4;">
+                <h4><strong><a href="/blog/2011/02/10/scala-gelistirme-ortami-ve-ornek-web-uygulamasi">Scala Geliştirme Ortamı ve Örnek Web Uygulaması</a></strong></h4>
+                <p>
+                    <i class="icon-calendar"></i> Şubat 10, 2011
+<!--                    | <i class="icon-comment"></i> <a href="/blog/2011/02/10/scala-gelistirme-ortami-ve-ornek-web-uygulamasi#disqus_thread" data-disqus-identifier="/blog/2011/02/10/scala-gelistirme-ortami-ve-ornek-web-uygulamasi">Yorumlar</a> -->
+
+                    
+                    | <i class="icon-tags"></i> Etiketler :
+                        
+                            <a href="tag/Diğer" rel="tooltip" title="View posts tagged with &quot;Diğer&quot;"><span class="label label-info">Diğer</span></a>
+                        
+                            <a href="tag/eclipse" rel="tooltip" title="View posts tagged with &quot;eclipse&quot;"><span class="label label-info">eclipse</span></a>
+                        
+                            <a href="tag/eclipsify" rel="tooltip" title="View posts tagged with &quot;eclipsify&quot;"><span class="label label-info">eclipsify</span></a>
+                        
+                            <a href="tag/sbt" rel="tooltip" title="View posts tagged with &quot;sbt&quot;"><span class="label label-info">sbt</span></a>
+                        
+                            <a href="tag/scala" rel="tooltip" title="View posts tagged with &quot;scala&quot;"><span class="label label-info">scala</span></a>
+                        
+                    
+                </p>
+                <p><a href="/blog/2011/02/10/scala-gelistirme-ortami-ve-ornek-web-uygulamasi">Yazıyı Oku</a></p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span8" style="padding: 15px 0 15px 0; border-bottom:1px solid #f4f4f4;">
+                <h4><strong><a href="/blog/2011/02/06/scalaya-giris">Scala'ya Giriş</a></strong></h4>
+                <p>
+                    <i class="icon-calendar"></i> Şubat 06, 2011
+<!--                    | <i class="icon-comment"></i> <a href="/blog/2011/02/06/scalaya-giris#disqus_thread" data-disqus-identifier="/blog/2011/02/06/scalaya-giris">Yorumlar</a> -->
+
+                    
+                    | <i class="icon-tags"></i> Etiketler :
+                        
+                            <a href="tag/akka" rel="tooltip" title="View posts tagged with &quot;akka&quot;"><span class="label label-info">akka</span></a>
+                        
+                            <a href="tag/Diğer" rel="tooltip" title="View posts tagged with &quot;Diğer&quot;"><span class="label label-info">Diğer</span></a>
+                        
+                            <a href="tag/lift" rel="tooltip" title="View posts tagged with &quot;lift&quot;"><span class="label label-info">lift</span></a>
+                        
+                            <a href="tag/programlama" rel="tooltip" title="View posts tagged with &quot;programlama&quot;"><span class="label label-info">programlama</span></a>
+                        
+                            <a href="tag/sbt" rel="tooltip" title="View posts tagged with &quot;sbt&quot;"><span class="label label-info">sbt</span></a>
+                        
+                    
+                </p>
+                <p><a href="/blog/2011/02/06/scalaya-giris">Yazıyı Oku</a></p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span8" style="padding: 15px 0 15px 0; border-bottom:1px solid #f4f4f4;">
+                <h4><strong><a href="/blog/2010/12/31/yeni-yilda-olceklenebilirlik-uzerine-planlar">Yeni Yılda Ölçeklenebilirlik Üzerine Planlar</a></strong></h4>
+                <p>
+                    <i class="icon-calendar"></i> Aralık 31, 2010
+<!--                    | <i class="icon-comment"></i> <a href="/blog/2010/12/31/yeni-yilda-olceklenebilirlik-uzerine-planlar#disqus_thread" data-disqus-identifier="/blog/2010/12/31/yeni-yilda-olceklenebilirlik-uzerine-planlar">Yorumlar</a> -->
+
+                    
+                    | <i class="icon-tags"></i> Etiketler :
+                        
+                            <a href="tag/akka" rel="tooltip" title="View posts tagged with &quot;akka&quot;"><span class="label label-info">akka</span></a>
+                        
+                            <a href="tag/availability" rel="tooltip" title="View posts tagged with &quot;availability&quot;"><span class="label label-info">availability</span></a>
+                        
+                            <a href="tag/cloud computing" rel="tooltip" title="View posts tagged with &quot;cloud computing&quot;"><span class="label label-info">cloud computing</span></a>
+                        
+                            <a href="tag/Diğer" rel="tooltip" title="View posts tagged with &quot;Diğer&quot;"><span class="label label-info">Diğer</span></a>
+                        
+                            <a href="tag/distributed computing" rel="tooltip" title="View posts tagged with &quot;distributed computing&quot;"><span class="label label-info">distributed computing</span></a>
+                        
+                    
+                </p>
+                <p><a href="/blog/2010/12/31/yeni-yilda-olceklenebilirlik-uzerine-planlar">Yazıyı Oku</a></p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span8" style="padding: 15px 0 15px 0; border-bottom:1px solid #f4f4f4;">
+                <h4><strong><a href="/blog/2010/12/21/javatar-kavanoz-bukme-procesi">jAvatar - Kavanoz Bükme Procesi</a></strong></h4>
+                <p>
+                    <i class="icon-calendar"></i> Aralık 21, 2010
+<!--                    | <i class="icon-comment"></i> <a href="/blog/2010/12/21/javatar-kavanoz-bukme-procesi#disqus_thread" data-disqus-identifier="/blog/2010/12/21/javatar-kavanoz-bukme-procesi">Yorumlar</a> -->
+
+                    
+                    | <i class="icon-tags"></i> Etiketler :
+                        
+                            <a href="tag/Diğer" rel="tooltip" title="View posts tagged with &quot;Diğer&quot;"><span class="label label-info">Diğer</span></a>
+                        
+                    
+                </p>
+                <p><a href="/blog/2010/12/21/javatar-kavanoz-bukme-procesi">Yazıyı Oku</a></p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span8" style="padding: 15px 0 15px 0; border-bottom:1px solid #f4f4f4;">
+                <h4><strong><a href="/blog/2010/09/11/htc-desire-icin-android-2-2-froyo-guncellemesi">HTC Desire için Android 2.2 (Froyo) Güncellemesi</a></strong></h4>
+                <p>
+                    <i class="icon-calendar"></i> Eylül 11, 2010
+<!--                    | <i class="icon-comment"></i> <a href="/blog/2010/09/11/htc-desire-icin-android-2-2-froyo-guncellemesi#disqus_thread" data-disqus-identifier="/blog/2010/09/11/htc-desire-icin-android-2-2-froyo-guncellemesi">Yorumlar</a> -->
+
+                    
+                    | <i class="icon-tags"></i> Etiketler :
+                        
+                            <a href="tag/android" rel="tooltip" title="View posts tagged with &quot;android&quot;"><span class="label label-info">android</span></a>
+                        
+                            <a href="tag/clockworkmod" rel="tooltip" title="View posts tagged with &quot;clockworkmod&quot;"><span class="label label-info">clockworkmod</span></a>
+                        
+                            <a href="tag/Diğer" rel="tooltip" title="View posts tagged with &quot;Diğer&quot;"><span class="label label-info">Diğer</span></a>
+                        
+                            <a href="tag/froyo" rel="tooltip" title="View posts tagged with &quot;froyo&quot;"><span class="label label-info">froyo</span></a>
+                        
+                            <a href="tag/goldcard" rel="tooltip" title="View posts tagged with &quot;goldcard&quot;"><span class="label label-info">goldcard</span></a>
+                        
+                    
+                </p>
+                <p><a href="/blog/2010/09/11/htc-desire-icin-android-2-2-froyo-guncellemesi">Yazıyı Oku</a></p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span8" style="padding: 15px 0 15px 0; border-bottom:1px solid #f4f4f4;">
+                <h4><strong><a href="/blog/2010/08/29/bir-web-catisi-framework-anatomisi">Bir Web Çatısı (Framework) Anatomisi</a></strong></h4>
+                <p>
+                    <i class="icon-calendar"></i> Ağustos 29, 2010
+<!--                    | <i class="icon-comment"></i> <a href="/blog/2010/08/29/bir-web-catisi-framework-anatomisi#disqus_thread" data-disqus-identifier="/blog/2010/08/29/bir-web-catisi-framework-anatomisi">Yorumlar</a> -->
+
+                    
+                    | <i class="icon-tags"></i> Etiketler :
+                        
+                            <a href="tag/acegi" rel="tooltip" title="View posts tagged with &quot;acegi&quot;"><span class="label label-info">acegi</span></a>
+                        
+                            <a href="tag/Diğer" rel="tooltip" title="View posts tagged with &quot;Diğer&quot;"><span class="label label-info">Diğer</span></a>
+                        
+                            <a href="tag/ehcache" rel="tooltip" title="View posts tagged with &quot;ehcache&quot;"><span class="label label-info">ehcache</span></a>
+                        
+                            <a href="tag/framework" rel="tooltip" title="View posts tagged with &quot;framework&quot;"><span class="label label-info">framework</span></a>
+                        
+                            <a href="tag/hibernate" rel="tooltip" title="View posts tagged with &quot;hibernate&quot;"><span class="label label-info">hibernate</span></a>
+                        
+                    
+                </p>
+                <p><a href="/blog/2010/08/29/bir-web-catisi-framework-anatomisi">Yazıyı Oku</a></p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span8" style="padding: 15px 0 15px 0; border-bottom:1px solid #f4f4f4;">
+                <h4><strong><a href="/blog/2010/08/09/java-dunyasinda-web-surfing-ve-spring-framework">Java Dünyasında Web Surfing ve Spring Framework</a></strong></h4>
+                <p>
+                    <i class="icon-calendar"></i> Ağustos 09, 2010
+<!--                    | <i class="icon-comment"></i> <a href="/blog/2010/08/09/java-dunyasinda-web-surfing-ve-spring-framework#disqus_thread" data-disqus-identifier="/blog/2010/08/09/java-dunyasinda-web-surfing-ve-spring-framework">Yorumlar</a> -->
+
+                    
+                    | <i class="icon-tags"></i> Etiketler :
+                        
+                            <a href="tag/Diğer" rel="tooltip" title="View posts tagged with &quot;Diğer&quot;"><span class="label label-info">Diğer</span></a>
+                        
+                            <a href="tag/ecplise" rel="tooltip" title="View posts tagged with &quot;ecplise&quot;"><span class="label label-info">ecplise</span></a>
+                        
+                            <a href="tag/hibernate" rel="tooltip" title="View posts tagged with &quot;hibernate&quot;"><span class="label label-info">hibernate</span></a>
+                        
+                            <a href="tag/java" rel="tooltip" title="View posts tagged with &quot;java&quot;"><span class="label label-info">java</span></a>
+                        
+                            <a href="tag/maven2" rel="tooltip" title="View posts tagged with &quot;maven2&quot;"><span class="label label-info">maven2</span></a>
+                        
+                    
+                </p>
+                <p><a href="/blog/2010/08/09/java-dunyasinda-web-surfing-ve-spring-framework">Yazıyı Oku</a></p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span8" style="padding: 15px 0 15px 0; border-bottom:1px solid #f4f4f4;">
+                <h4><strong><a href="/blog/2010/08/01/scala-turkiye-yayinda">Scala Türkiye Yayında</a></strong></h4>
+                <p>
+                    <i class="icon-calendar"></i> Ağustos 01, 2010
+<!--                    | <i class="icon-comment"></i> <a href="/blog/2010/08/01/scala-turkiye-yayinda#disqus_thread" data-disqus-identifier="/blog/2010/08/01/scala-turkiye-yayinda">Yorumlar</a> -->
+
+                    
+                    | <i class="icon-tags"></i> Etiketler :
+                        
+                            <a href="tag/Diğer" rel="tooltip" title="View posts tagged with &quot;Diğer&quot;"><span class="label label-info">Diğer</span></a>
+                        
+                    
+                </p>
+                <p><a href="/blog/2010/08/01/scala-turkiye-yayinda">Yazıyı Oku</a></p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="span8" style="padding: 15px 0 15px 0; border-bottom:1px solid #f4f4f4;">
+                <h4><strong><a href="/blog/2010/08/01/java-berbattir">Java Berbattır</a></strong></h4>
+                <p>
+                    <i class="icon-calendar"></i> Ağustos 01, 2010
+<!--                    | <i class="icon-comment"></i> <a href="/blog/2010/08/01/java-berbattir#disqus_thread" data-disqus-identifier="/blog/2010/08/01/java-berbattir">Yorumlar</a> -->
+
+                    
+                    | <i class="icon-tags"></i> Etiketler :
+                        
+                            <a href="tag/Diğer" rel="tooltip" title="View posts tagged with &quot;Diğer&quot;"><span class="label label-info">Diğer</span></a>
+                        
+                    
+                </p>
+                <p><a href="/blog/2010/08/01/java-berbattir">Yazıyı Oku</a></p>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
+
+
+        </div>
+    </div>
+</div>
+<!-- /container -->
+
+
+<footer class="footer">
+    <div class="container">
+        <p class="pull-right"> | <a href="#">Başa Dön</a> | </p>
+
+        <p>
+            &copy; 2007 - 2013 Hasan Ozgan<br/>
+            <small>En son güncellenme tarihi: Kasım 04, 2013</small>
+        </p>
+
+    </div>
+</footer>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/themes/heves/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/assets/themes/heves/js/jquery.followbox.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1491715-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+

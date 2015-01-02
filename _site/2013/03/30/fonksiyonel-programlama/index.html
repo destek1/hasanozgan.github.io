@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Fonksiyonel Programlama &middot; Scalability in Web
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/web//public/css/poole.css">
+  <link rel="stylesheet" href="/web//public/css/syntax.css">
+  <link rel="stylesheet" href="/web//public/css/lanyon.css">
+  <link rel="stylesheet" href="/web//public/css/custom.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/web//public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/web//public/favicon.ico">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="theme-base-08">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>A reserved <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/web/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/web//about/">About</a>
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/web//archive/">Arşiv</a>
+        
+      
+    
+      
+    
+  
+    <span class="sidebar-nav-item">Currently v1.0.0</span>
+  </nav>
+
+  <div class="sidebar-item">
+    <p>
+      &copy; 2015. All rights reserved.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/web/" title="Home">Scalability in Web</a>
+            <small>Hasan Ozgan's Programming Blog </small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="post">
+  <h1 class="post-title">Fonksiyonel Programlama</h1>
+  <span class="post-date">30 Mar 2013</span>
+  <p>Fonksiyonel Programlama, günümüz web dünyasında her programcının bilmesi ve uygulaması gereken bir programlama paradigmasıdır. Nedenini bu yazının ilerleyen satırlarında bulacaksınız. Bu konu hakkında araştırma yaparken Türkçe kaynağın çok az ve yetersiz olduğunu gördüm. Bende bu konuyu dilim döndüğünce blogumda paylaşmaya karar verdim. Yeni öğrendiğim bir konu olduğu için, hatalı ve yanlış anlaşılmaya müsait olan noktalar olabilir. Eğer fonksiyonel programlamaya yıllarınızı verdiyseniz bu yazıya katkıda bulunabilirsiniz. Eğer benim gibi bu konuda yeniyseniz (devamının gelmesini umduğum) bu giriş yazısı umarım sizin için iyi bir başlangıç olur. </p>
+
+<p>Fazla vakit kaybetmeden gelin fonksiyonel programlama paradigmasını daha yakından inceleyelim.</p>
+
+<p><img src="/public/images/2013-03-functional-programming.png" alt="Fonksiyonel Programlama"></p>
+
+<h2>Nedir?</h2>
+
+<p>Programlama dilleri, imperatif (Java, C, C++ vb.) ve dekleratif (Lisp, Haskel vb.) diller olmak üzere  ikiye ayrılır. Fonksiyonel programlamada bir deklaratif bir dildir. Bu dil, matematikteki fonksiyonlara ait tüm özellikleri taşır. Fonksiyonların aldıkları parametreler ve geri dönüş değerleri sabittir ve değişiklik göstermez. Yani, yan-etkiler (<strong>side-effect</strong>) bulunmaz.</p>
+
+<p>Yıllarca nesne yönelimli programlama dilleriyde çalışmış birinin, hemen fonksiyonel paradigmaya ait konuları anlaması çok kolay olmuyor maalesef. Nesne yönelimli bir programcının öncellikle değişkenler ve döngüler olmadan nasıl kod yazacağını düşünmesi gerekiyor. Bize hep herşeyi nesneler olarak küçük görevlere ayırmamız sonra bu görevleri doğru bir şekilde sınıflamamız öğretildi. Fonksiyonel programlamada, herşey fonksiyonlarla yapılır. Merak etmeyin fonksiyonel programlamanın ne olduğunu <em>&quot;Nasıl&quot;</em> başlığı altında ve örnekler yaptıkça daha iyi anlayacağız. </p>
+
+<p>Fonksiyonel programlamada değişkensiz ve döngüsüz bir hayat <em>nasıl olur</em> sorusuna güzel bir örnek olarak; hepimizin az-çok bildiğini düşündüğüm excel gibi elektronik tablo (spreadsheets) türevi yazılımları verebiliriz. Elektronik tablo yazılımlarında her hücre bir değer alır ve geri döner. İç içe fonksiyonlar çağrılabilir. Hücre grubu liste olarak bir başka hücreye parametre olarak verilebilir. Birbirinden habersiz olarak sadece kendi etki alanlarından beklenen işi yaparlar. Bu konuda stackoverflow&#39;da okuduğum <a href="http://stackoverflow.com/a/1956514/204928">makalelere</a> göz atabilirsiniz.</p>
+
+<p>Bir başka örnekte, unix terminallerde, bir komut çıktısını başka bir komut setine aktarmak için kullanılan pipe (|) güzel bir fonksiyonel çağrı örneği olabilir. Aşağıdaki örneği inceleyebilirsiniz.</p>
+
+<!-- highlight sh lineos -->
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c"># &quot;IMPERATIVE TERMINAL&quot;</span>
+<span class="nv">$ </span>./program1
+<span class="nv">$ </span>./program2 --param1<span class="o">=</span>1
+<span class="nv">$ </span>./program3
+ 
+<span class="c"># &quot;FUNCTIONAL TERMINAL&quot;</span>
+<span class="nv">$ </span>./program1 <span class="p">|</span> ./program2 --param1<span class="o">=</span><span class="m">1</span> <span class="p">|</span> ./program3</code></pre></div>
+
+<p>Fonksiyonel programlama deyince; web geliştiricisi olarak, hepimiz aslında fonksiyonel programlamanın bazı özelliklerini farkında olarak yada olmayarak kullanıyoruz. Eğer fonksiyonel programlama hakkında biraz araştırma yaptıysanız, &quot;javascript fonksiyonel bir dildir&quot; gibi birşeyler duymuş olabilirsiniz. <strong>first-class</strong> fonksiyonları ve <strong>lambda</strong>ları desteklemesi göz önünde bulundurulursa fonksiyonel bir dil olarak düşünülebilir. Fakat fonksiyonel programlama sadece bu konulardan ibaret değildir. Bu yüzden literatülde javascript bir fonksiyonel programla dili olarak kabul edilmez. <a href="http://stackoverflow.com/a/3962690/204928">stackoverflow&#39;daki şu tartışmayı</a> inceleyebilirsiniz.</p>
+
+<p>Şimdi gelin neden fonksiyonel programlama gerekli onu biraz irdeleyelim.</p>
+
+<h2>Neden?</h2>
+
+<p>Günümüz dünyasında web eş-zamanlı, dinamik ve ölçeklenebilir bir hale geldi. Örneğin, gönderdiğimiz bir tweet anlık olarak takipçiler tarafından görüntülenir ve arama sonuçlarına yansıtılır. Yüzlerce insan aynı anda bir web sitesini, bir fotoğrafı veya bir blog yazısını facebookta beğenebiliyor yada paylaşabiliyor. Altında ciddi bir mühendislik olan bu siteler nasıl hızlı ve anlık olarak çalışabiliyorlar hiç düşündünüz mü? Cevabınız işlemcilerin veya donanımların güçlenmesi, moore yasası kanunun geçerliliğini koruması vb gibi cevaplar aklınıza geliyorsa maalesef yanılıyorsunuz. Donanımların güçlenmesi tek başına asla yeterli olmamış ve olmayacaktır.</p>
+
+<blockquote>
+<p><strong>Moore Yasası</strong> Her 18 ayda bir tümleşik devre üzerine yerleştirilebilecek bileşen sayısının iki katına çıkacacağını, bunun bilgisayarların işlem kapasitelerinde büyük artışlar yaratacağını, üretim maliyetlerinin ise aynı kalacağını, hatta düşme eğilimi göstereceğini öngören deneysel gözlem.</p>
+</blockquote>
+
+<p>Donanım mühendisleri <em>Moore Yasası</em> doğrultusunda, fiziksel sınırları zorlayarak sona geldiklerinde, paralel çekirdek mimarileri tasarlamaya ve geliştirmeye başladılar. Böylece hayatımıza 2, 4 vb... şeklinde çok çekirdekli, paralel çalışabilen işlemciler girdi. Hız için yapılan bu geliştirme beraberinde paralel programlama ihtiyacınıda beraberinde getirdi. </p>
+
+<p>Paralel programlama yaparken dikkat edilmesi gereken en önemli konu deterministik olmasıdır. Yani aynı sonuçlar altında aynı durumu vermesidir. Web dünyasında bu nedenle durum tutmayan (<strong>stateless</strong>) önemlidir. Concurrent programlamada thread konuları söz konusu olduğunda değişmeyen veriler (<strong>immutable</strong>) kullanmak ve saf yani (<strong>pure-function</strong>) yan-etkisi olmayan fonksiyonlar kullanmak gereklidir. </p>
+
+<p>İşte fonksiyonel programlama paradigması, deterministik bir programlama disiplinidir.</p>
+
+<p>Bu yüzden paralel programlama algoritmaları ve çözümlerinin yolu mutlaka fonksiyonel programlama pratiklerinden geçer.</p>
+
+<p>Paralel programlama ve donanım neden yeterli olmadığı bir Google örneği vermek istiyorum. Google&#39;ın ilk kurulduğu yıllarda tüm interneti depolamak için neden normal PCler kullandı hiç düşündünüz mü? Bunun yerine süper bilgisayarlar üzerinde koşan verilerin kudretli kahini Oracle&#39;ın veritabanı ile siteleri indekslemek yerine elektronik tablo gibi kolon tabanlı bir veri mimarisi kullandı? Maalesef çok büyük verileri yönetmek için ilişkisiel veritabanlarının yük dağılımı ile ilgili sorunları oluşmaya başlıyor. Ayrıca Oracle gibi veritabanları pahalı bilgisayarlar üzerinde koşarlar. Bozulma ihtimallerine karşı yedekleme maaliyeti çok yüksek. Google bir mühendislik şirketi olarak fonksiyonel programlamada olduğu gibi bir çok  düğümden (node) oluşan mozaik bir mimari kurdu. Bu mimari sayesinde, ölçeklenebilirliğin gerektirdiği bölünebilme toleransı <em>(partition tolerance)</em>  sağlanmış oldu <em>(bknz. <a href="http://en.wikipedia.org/wiki/CAP_theorem">CAP Theorem</a>)</em>. Ucuz maaliyetli bu bilgisayarlardan bir yada birkaçı bozulsa bile arama motoru çalışmaya ve sonuçlar getirmeye devam edecekti. Kısacası Google&#39;ın <em>BigTable</em> adını verdiği sonra <em>Apache Foundation</em> tarafından bir benzeri yapılan <em>Hadoop</em> teknolojisi fonksiyonel programlama paradigmasını kuralları üzerine kurulmuştur. (bknz. <a href="http://hadoop.apache.org/docs/r1.0.4/mapred_tutorial.html">Map-Reduce</a>)</p>
+
+<p>İşte web dünyasında fonksiyonel programlama dillerine sıcak bakmasının sebebi budur. <em>Dağınık mimariler kurmak!</em> Fonksiyonel programlama dilleri dağınık mimariler için bir kodlama disiplini sağlar. Paralel programlamada istenmeyen yan-etkisi (side-effect) bulunan fonksiyonlar olmasına izin verilmez. Eğer yan etki gerektiren bir durum varsa, Bu gibi durumlarda <strong>monad</strong> diye adlandırılan bir teknik kullanılır.</p>
+
+<p>İşte bu sebeple bir web programcısı için fonksiyonel programlama önemlidir. Belki bu disiplini kazandırmak için; PHP, Java gibi eski web dilleri fonksiyonel paradigmayı destekler özellikleri kendilerine katmaya başladılar.</p>
+
+<h2>Nasıl?</h2>
+
+<p>Aşağıda genel fonksiyonel programlama kavramlarına kısaca değinilmiş ve örnekler verilmiştir.</p>
+
+<h3>Pure Functions</h3>
+
+<p>Saf fonksiyonlar, yan etki barındırmayan fonksiyonlara denir. Peki yan etki nedir?</p>
+
+<p>Yan-etki <em>(side-effect)</em>, genel olarak programlamada bir fonksiyonun kendi kapsama (scope) alanı dışında birşeyleri değiştirmesi durumudur. </p>
+
+<p>Fonksiyonel programlamada &quot;değisken&quot; diye bir kavram olmadığından ve her şey eninde sonunda bir fonksiyon oldugundan &quot;degistirebileceginiz&quot; degiskenler ve durumlar aslında yoktur. Ama yan etki illa, değişken olması gerekmez. Konsola çıktı yazmak, loglama yapmak, ekrana pencere çıkarmak, sistemdeki dosya, yazıcı, kamera gibi başka kaynaklara erişmek hepsi yan etkiye sebep olur.</p>
+
+<p>Bu yüzden derleyici yan etkiye yol açan fonksiyonları sıralı olarak çağırır. Paralel çalışmalarına izin vermez.</p>
+
+<div class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">pureFunc</span><span class="o">(</span><span class="n">x</span> <span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">y</span> <span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span></code></pre></div>
+
+<div class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">nonPureFunc</span><span class="o">(</span><span class="n">x</span> <span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">y</span> <span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="n">println</span><span class="o">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="o">)</span>
+<span class="c1">// because write to screen (side-effect alert!)</span></code></pre></div>
+
+<h3> Lists and Tuples</h3>
+
+<p>Fonksiyonel programlamada listeler çok önemlidir. Veri grupları (tuples) ise farklı veri tiplerini barındırabilir.</p>
+
+<div class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="c1">// tuples example</span>
+<span class="k">val</span> <span class="n">tuple</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">Tuple3</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="s">&quot;hello&quot;</span><span class="o">,</span> <span class="nc">Console</span><span class="o">)</span>
+ 
+<span class="c1">// list example</span>
+<span class="k">val</span> <span class="n">days</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span><span class="s">&quot;Sunday&quot;</span><span class="o">,</span> <span class="s">&quot;Monday&quot;</span><span class="o">,</span> <span class="s">&quot;Tuesday&quot;</span><span class="o">,</span> <span class="s">&quot;Wednesday&quot;</span><span class="o">,</span> <span class="s">&quot;Thursday&quot;</span><span class="o">,</span> <span class="s">&quot;Friday&quot;</span><span class="o">,</span> <span class="s">&quot;Saturday&quot;</span><span class="o">)</span></code></pre></div>
+
+<h3>Recursive Functions</h3>
+
+<p>Döngü yerine kendini çağıran (<strong>recursive</strong>) fonksiyonlar kullanılarak yapılır demiştik hatırlarsanız. Değişken diye birşey yoktur, değişkenlerde fonksiyonların kendisidir demiştik.</p>
+
+<div class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">whileLoop</span><span class="o">(</span><span class="n">cond</span><span class="k">:</span> <span class="o">=&gt;</span><span class="nc">Boolean</span><span class="o">,</span> <span class="n">block</span><span class="k">:</span> <span class="o">=&gt;</span><span class="nc">Unit</span><span class="o">)</span> <span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span>
+  <span class="k">if</span><span class="o">(</span><span class="n">cond</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">block</span>
+    <span class="n">whileLoop</span><span class="o">(</span><span class="n">cond</span><span class="o">,</span> <span class="n">block</span><span class="o">)</span>
+  <span class="o">}</span>
+ 
+<span class="c1">//scala&gt; val a = Array(1, 2, 3)</span>
+<span class="c1">//scala&gt; var i = 0</span>
+<span class="c1">//scala&gt; whileLoop(i &lt; a.length, { println(i); i += 1 })</span>
+<span class="c1">//1</span>
+<span class="c1">//2</span>
+<span class="c1">//3</span></code></pre></div>
+
+<h3>High-Order Functions</h3>
+
+<p>Herşey fonksiyonlar yapılır ve fonksiyonlarda değişken gibidir demişken, bir fonksiyon başka bir fonksiyonu parametre olarak alabilir. Buna <strong>high-order functions</strong> denir.</p>
+
+<div class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">apply</span><span class="o">(</span><span class="n">f</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=&gt;</span> <span class="nc">String</span><span class="o">,</span> <span class="n">v</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="n">f</span><span class="o">(</span><span class="n">v</span><span class="o">)</span>
+<span class="k">def</span> <span class="n">layout</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">x</span><span class="k">:</span> <span class="kt">A</span><span class="o">)</span> <span class="k">=</span> <span class="s">&quot;[&quot;</span> <span class="o">+</span> <span class="n">x</span><span class="o">.</span><span class="n">toString</span><span class="o">()</span> <span class="o">+</span> <span class="s">&quot;]&quot;</span>
+
+<span class="c1">// println( apply( layout, 10) )</span>
+<span class="c1">//[10]</span></code></pre></div>
+
+<h3>Anonymous Functions (Lambda Expressions)</h3>
+
+<p>Bir fonksiyon tanımı yapılmadan yani bir kod blogu olarak kullanılabilir. Buna <strong>lambda</strong> yada <strong>anonymous functions</strong> denir. </p>
+
+<div class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span></code></pre></div>
+
+<h3>Currying</h3>
+
+<p>Fonksiyona ait parametrelerin azaltılması gerekebilir. Buna <strong>currying</strong> denir.</p>
+
+<div class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">divisibleby</span><span class="o">(</span><span class="n">factor</span> <span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="o">(</span><span class="n">value</span> <span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="n">value</span> <span class="o">%</span> <span class="n">factor</span> <span class="o">==</span> <span class="mi">0</span> 
+<span class="k">val</span> <span class="n">evens</span> <span class="k">=</span> <span class="o">(</span><span class="mi">1</span> <span class="n">to</span> <span class="mi">10</span><span class="o">).</span><span class="n">filter</span><span class="o">(</span><span class="n">divisibleby</span><span class="o">(</span><span class="mi">2</span><span class="o">))</span>
+
+<span class="c1">// divisibleby: (factor: Int)(value: Int)Boolean</span>
+<span class="c1">// evens: scala.collection.immutable.IndexedSeq[Int] = Vector(2, 4, 6, 8, 10)</span></code></pre></div>
+
+<p>Ayrıca domain specific bir dil tanımlarken de kullanabilirsiniz, Güzel bir sintatik görünüm sağlar. Aşağıda bununla ilgili bir örnek bulabilirsiniz.</p>
+
+<div class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">whileLoop</span><span class="o">(</span><span class="n">cond</span> <span class="k">:</span> <span class="o">=&gt;</span><span class="nc">Boolean</span><span class="o">)(</span><span class="n">block</span> <span class="k">:</span> <span class="o">=&gt;</span><span class="nc">Unit</span><span class="o">)</span> <span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span>
+  <span class="k">if</span><span class="o">(</span><span class="n">cond</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">block</span>
+    <span class="n">whileLoop</span><span class="o">(</span><span class="n">cond</span><span class="o">)(</span><span class="n">block</span><span class="o">)</span>
+  <span class="o">}</span>
+
+<span class="c1">//whileLoop(i &lt; a.length) {</span>
+<span class="c1">//  println(a(i))</span>
+<span class="c1">//  i += 1</span>
+<span class="c1">//}</span></code></pre></div>
+
+<p>Bir fonksiyon currying haline aşağıdaki şekilde getirilebilir.</p>
+
+<div class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">add</span><span class="o">(</span><span class="n">x</span><span class="k">:</span><span class="kt">Int</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span><span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="k">val</span> <span class="n">addCurried</span> <span class="k">=</span> <span class="nc">Function</span><span class="o">.</span><span class="n">curried</span><span class="o">(</span><span class="n">add</span> <span class="k">_</span><span class="o">)</span>
+
+<span class="n">add</span><span class="o">(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">)</span>   <span class="c1">// 3</span>
+<span class="n">addCurried</span><span class="o">(</span><span class="mi">1</span><span class="o">)(</span><span class="mi">2</span><span class="o">)</span>   <span class="c1">// 3</span></code></pre></div>
+
+<p>Currying olan bir fonksiyon currying&#39;siz hale aşağıdaki şekilde getirilebilir.</p>
+
+<div class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">add</span><span class="o">(</span><span class="n">x</span><span class="k">:</span><span class="kt">Int</span><span class="o">)(</span><span class="n">y</span><span class="k">:</span><span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="k">val</span> <span class="n">addUncurried</span> <span class="k">=</span> <span class="nc">Function</span><span class="o">.</span><span class="n">uncurried</span><span class="o">(</span><span class="n">add</span> <span class="k">_</span><span class="o">)</span>
+
+<span class="n">add</span><span class="o">(</span><span class="mi">3</span><span class="o">)(</span><span class="mi">4</span><span class="o">)</span>  <span class="c1">// 7</span>
+<span class="n">addUncurried</span><span class="o">(</span><span class="mi">3</span><span class="o">,</span> <span class="mi">4</span><span class="o">)</span>  <span class="c1">// 7</span></code></pre></div>
+
+<h3>First-Class Functions (Closure)</h3>
+
+<p>Fonksiyonel programlamada tip sınıfı <strong>first-class citizen</strong> diye bir konu vardır. Üç çeşittir. Öğelerinden biri, <strong>first-class function</strong> konusunudur. Buna göre;</p>
+
+<ul>
+<li>bir fonksiyon başka bir fonksiyonu parametre olarak alabilir. </li>
+<li>bir fonksiyonu geri dönüş değeri olarak verebilir. </li>
+<li>bir fonksiyon bir değer olarak atanabilir.</li>
+</ul>
+
+<p><strong>first-class function</strong> aynı zamanda <strong>closure</strong> olarakta bilinir.</p>
+
+<div class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">def</span> <span class="n">makeIncrementer</span><span class="o">(</span><span class="n">inc</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="o">(</span><span class="kt">Int</span> <span class="o">=&gt;</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="n">inc</span>
+
+<span class="k">val</span> <span class="n">a</span> <span class="k">=</span> <span class="n">makeIncrementer</span><span class="o">(</span><span class="mi">10</span><span class="o">)</span>
+<span class="c1">// a: (Int) =&gt; Int = </span>
+
+<span class="k">val</span> <span class="n">b</span> <span class="k">=</span> <span class="n">a</span><span class="o">(</span><span class="mi">25</span><span class="o">)</span>
+<span class="c1">// res4: Int = 35</span></code></pre></div>
+
+<h3>Monads</h3>
+
+<p>Monad&#39;lar fonksiyonlara kontrollü yan-etki desteği vermek için kullanılan bir tekniktir. Monad bir tür context olarak düşünüebilir. Monadlar 3 operatörle tanımlanır. Bunlar;</p>
+
+<p><strong>bind</strong></p>
+
+<p>Context içindeki bir değeri geçici olarak dışarı çıkarıp, ona bir değişiklik uygulayıp tekrar context&#39;e sokar.</p>
+
+<p><strong>return</strong></p>
+
+<p>Herhangi bir değeri olabilecek en basit sekilde context&#39;e sokar.</p>
+
+<p><strong>run</strong></p>
+
+<p>bir monad ayrica bir programi (~ computation) temsil ediyor olarak da
+dusunulebilir. temsil edilen programi calistirip sonucu hesaplamak icin
+kullanilir.</p>
+
+<div class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">trait</span> <span class="nc">Monad</span><span class="o">[</span><span class="kt">M</span><span class="o">[</span><span class="k">_</span><span class="o">]]</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">unit</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">x</span> <span class="k">:</span> <span class="kt">A</span><span class="o">)</span> <span class="k">:</span> <span class="kt">M</span><span class="o">[</span><span class="kt">A</span><span class="o">]</span>
+
+  <span class="k">def</span> <span class="n">bind</span><span class="o">[</span><span class="kt">A</span>, <span class="kt">B</span><span class="o">](</span><span class="n">m</span> <span class="k">:</span> <span class="kt">M</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">f</span> <span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="n">M</span><span class="o">[</span><span class="kt">B</span><span class="o">])</span> <span class="k">:</span> <span class="kt">M</span><span class="o">[</span><span class="kt">B</span><span class="o">]</span>
+<span class="o">}</span>
+
+<span class="k">implicit</span> <span class="k">object</span> <span class="nc">OptionMonad</span> <span class="k">extends</span> <span class="nc">Monad</span><span class="o">[</span><span class="kt">Option</span><span class="o">]</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">unit</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">x</span> <span class="k">:</span> <span class="kt">A</span><span class="o">)</span> <span class="k">=</span> <span class="nc">Some</span><span class="o">(</span><span class="n">x</span><span class="o">)</span>
+
+  <span class="k">def</span> <span class="n">bind</span><span class="o">[</span><span class="kt">A</span>, <span class="kt">B</span><span class="o">](</span><span class="n">m</span> <span class="k">:</span> <span class="kt">Option</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">f</span> <span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="nc">Option</span><span class="o">[</span><span class="kt">B</span><span class="o">])</span> <span class="k">=</span> <span class="n">m</span><span class="o">.</span><span class="n">flatMap</span><span class="o">(</span><span class="n">f</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">implicit</span> <span class="k">object</span> <span class="nc">ListMonad</span> <span class="k">extends</span> <span class="nc">Monad</span><span class="o">[</span><span class="kt">List</span><span class="o">]</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">unit</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">x</span> <span class="k">:</span> <span class="kt">A</span><span class="o">)</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span><span class="n">x</span><span class="o">)</span>
+
+  <span class="k">def</span> <span class="n">bind</span><span class="o">[</span><span class="kt">A</span>, <span class="kt">B</span><span class="o">](</span><span class="n">m</span> <span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">f</span> <span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="nc">List</span><span class="o">[</span><span class="kt">B</span><span class="o">])</span> <span class="k">=</span> <span class="n">m</span><span class="o">.</span><span class="n">flatMap</span><span class="o">(</span><span class="n">f</span><span class="o">)</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Philip Wadler&#39;ın <a href="http://mirrors.csl.sri.com/www.brics.dk/%257Ehosc/local/LaSC-7-1-pp39-56.pdf">Monads and Composable Continuations</a> hakkındaki makalesi önerilir. </p>
+
+<h3>First-Class Controls (Continuations)</h3>
+
+<p>Bir nevi fonksiyonel programlamanın GOTO deyimidir. </p>
+
+<div class="highlight"><pre><code class="language-scala" data-lang="scala"><span class="k">import</span> <span class="nn">scala.util.continuations._</span>
+
+<span class="k">def</span> <span class="n">reify</span><span class="o">[</span><span class="kt">A</span>, <span class="kt">M</span><span class="o">[</span><span class="kt">+</span><span class="k">_</span><span class="o">]](</span><span class="n">x</span> <span class="k">:</span> <span class="o">=&gt;</span> <span class="n">A</span> <span class="nd">@cpsParam</span><span class="o">[</span><span class="kt">M</span><span class="o">[</span><span class="kt">A</span><span class="o">]</span>, <span class="kt">M</span><span class="o">[</span><span class="kt">A</span><span class="o">]])(</span><span class="k">implicit</span> <span class="n">monad</span> <span class="k">:</span> <span class="kt">Monad</span><span class="o">[</span><span class="kt">M</span><span class="o">])</span> <span class="k">:</span> <span class="kt">M</span><span class="o">[</span><span class="kt">A</span><span class="o">]</span> <span class="k">=</span>
+  <span class="n">reset</span> <span class="o">{</span> <span class="n">monad</span><span class="o">.</span><span class="n">unit</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">Reflective</span><span class="o">[</span><span class="kt">+A</span>, <span class="kt">M</span><span class="o">[</span><span class="k">_</span><span class="o">]](</span><span class="n">m</span> <span class="k">:</span> <span class="kt">M</span><span class="o">[</span><span class="kt">A</span><span class="o">],</span> <span class="n">monad</span> <span class="k">:</span> <span class="kt">Monad</span><span class="o">[</span><span class="kt">M</span><span class="o">])</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">reflect</span><span class="o">[</span><span class="kt">B</span><span class="o">]()</span> <span class="k">:</span> <span class="kt">A</span> <span class="kt">@cpsParam</span><span class="o">[</span><span class="kt">M</span><span class="o">[</span><span class="kt">B</span><span class="o">]</span>, <span class="kt">M</span><span class="o">[</span><span class="kt">B</span><span class="o">]]</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="n">shift</span> <span class="o">{</span> <span class="o">(</span><span class="n">k</span> <span class="k">:</span> <span class="kt">A</span> <span class="o">=&gt;</span> <span class="n">M</span><span class="o">[</span><span class="kt">B</span><span class="o">])</span> <span class="k">=&gt;</span>
+      <span class="n">monad</span><span class="o">.</span><span class="n">bind</span><span class="o">(</span><span class="n">m</span><span class="o">,</span> <span class="n">k</span><span class="o">)</span>
+    <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="k">implicit</span> <span class="k">def</span> <span class="n">reflective</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">xs</span> <span class="k">:</span> <span class="kt">Option</span><span class="o">[</span><span class="kt">A</span><span class="o">])(</span><span class="k">implicit</span> <span class="n">monad</span> <span class="k">:</span> <span class="kt">Monad</span><span class="o">[</span><span class="kt">Option</span><span class="o">])</span> <span class="k">=</span>
+  <span class="k">new</span> <span class="nc">Reflective</span><span class="o">[</span><span class="kt">A</span>, <span class="kt">Option</span><span class="o">](</span><span class="n">xs</span><span class="o">,</span> <span class="n">monad</span><span class="o">)</span>
+
+<span class="k">implicit</span> <span class="k">def</span> <span class="n">reflective</span><span class="o">[</span><span class="kt">A</span><span class="o">](</span><span class="n">xs</span> <span class="k">:</span> <span class="kt">List</span><span class="o">[</span><span class="kt">A</span><span class="o">])(</span><span class="k">implicit</span> <span class="n">monad</span> <span class="k">:</span> <span class="kt">Monad</span><span class="o">[</span><span class="kt">List</span><span class="o">])</span> <span class="k">=</span>
+  <span class="k">new</span> <span class="nc">Reflective</span><span class="o">[</span><span class="kt">A</span>, <span class="kt">List</span><span class="o">](</span><span class="n">xs</span><span class="o">,</span> <span class="n">monad</span><span class="o">)</span>
+
+<span class="n">reify</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="n">left</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span><span class="s">&quot;x&quot;</span><span class="o">,</span> <span class="s">&quot;y&quot;</span><span class="o">,</span> <span class="s">&quot;z&quot;</span><span class="o">).</span><span class="n">reflect</span><span class="o">[(</span><span class="kt">String</span>, <span class="kt">Int</span><span class="o">)]</span>
+  <span class="k">val</span> <span class="n">right</span> <span class="k">=</span> <span class="nc">List</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="mi">5</span><span class="o">,</span> <span class="mi">6</span><span class="o">).</span><span class="n">reflect</span><span class="o">[(</span><span class="kt">String</span>, <span class="kt">Int</span><span class="o">)]</span>
+
+  <span class="o">(</span><span class="n">left</span><span class="o">,</span> <span class="n">right</span><span class="o">)</span>
+<span class="o">}</span></code></pre></div>
+
+<p>Monad ve Continuation konusunda araştırmalarım devam ediyor. Daha detaylı bir bilgilendirme, bir sonraki yazımda olacak.</p>
+
+<p><strong>Günceleme:</strong> 2014 yılı boyunca bu konuda bir yazım olamadı.</p>
+
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    
+  </ul>
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+  </body>
+</html>

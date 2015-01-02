@@ -1,0 +1,375 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>PHP ve NoSQL (MongoDB)</title>
+    
+    <meta name="author" content="Hasan Ozgan">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/assets/themes/heves/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="/assets/themes/heves/css/docs.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/heves/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="/assets/themes/heves/css/followbox.css" rel="stylesheet" type="text/css"/>
+
+    <!-- Le fav and touch icons -->
+    <!-- Update these with your own images
+      <link rel="shortcut icon" href="images/favicon.ico">
+      <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+    -->
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top">
+<a href="http://www.reactivemanifesto.org/"><img style="border: 0; position: fixed; right: 0; top:41px; z-index: 9000" src="http://www.reactivemanifesto.org/images/ribbons/we-are-reactive-red-right.png"></a> 
+    <div class="navbar-inner">
+        <div class="container" style="width:1200px">
+           <a class="brand" href="/">Internet Stratejileri, Yazılım Geliştirme ve Mimarileri Üzerine</a>
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li>
+                        <a href="/"><i class="icon-home"></i> Anasayfa</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-briefcase"></i> Belgeler <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        	<li><a href="/blog/2013/03/30/fonksiyonel-programlama/" target="_blank">Fonksiyonel Programlama</a></li>
+                            <li><a href="/belgeler/scala-rehberi" rel="tooltip" title="Scala Rehberi" target="_blank">Scala Rehberi</a></li>
+                            <li><a href="/belgeler/tasarim-desenleri" rel="tooltip" title="Tasarım Desenleri" target="_blank">Tasarım Desenleri</a></li>
+                            <li><a href="/belgeler/tasarim-prensipleri" rel="tooltip" title="Tasarım Prensipleri" target="_blank">Tasarım Prensipleri</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="https://github.com/HasanOzgan"><i class="icon-globe"></i> Projeler</a>
+                    </li>
+                    <li><a href="/archive"><i class="icon-folder-open"></i> Arşiv</a></li>
+                    <li>
+                        <a href="/hakkinda"><i class="icon-user"></i> Hakkımda</a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="marketing">
+        <div class="content">
+            
+
+
+<div class="row">
+    <div class="span12 column">
+        <p></p><h1>PHP ve NoSQL (MongoDB)</h1><p></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span8 column">
+        <!--<h5><strong>Nisan 06, 2010 <small> | <a href="/blog/2010/04/06/php-ve-nosql-mongodb#disqus_thread" data-disqus-identifier="/blog/2010/04/06/php-ve-nosql-mongodb">Yorumlar</a></small></strong><br>-->
+
+        
+            <i class="icon-tags"></i> Etiketler :
+            
+                <a href="tag/activemongo" rel="tooltip" title="View posts tagged with &quot;activemongo&quot;"><span class="label label-info">activemongo</span></a>
+            
+                <a href="tag/Diğer" rel="tooltip" title="View posts tagged with &quot;Diğer&quot;"><span class="label label-info">Diğer</span></a>
+            
+                <a href="tag/kohana" rel="tooltip" title="View posts tagged with &quot;kohana&quot;"><span class="label label-info">kohana</span></a>
+            
+                <a href="tag/linux" rel="tooltip" title="View posts tagged with &quot;linux&quot;"><span class="label label-info">linux</span></a>
+            
+                <a href="tag/mango" rel="tooltip" title="View posts tagged with &quot;mango&quot;"><span class="label label-info">mango</span></a>
+            
+                <a href="tag/mongodb" rel="tooltip" title="View posts tagged with &quot;mongodb&quot;"><span class="label label-info">mongodb</span></a>
+            
+                <a href="tag/morph" rel="tooltip" title="View posts tagged with &quot;morph&quot;"><span class="label label-info">morph</span></a>
+            
+                <a href="tag/nosql" rel="tooltip" title="View posts tagged with &quot;nosql&quot;"><span class="label label-info">nosql</span></a>
+            
+                <a href="tag/php" rel="tooltip" title="View posts tagged with &quot;php&quot;"><span class="label label-info">php</span></a>
+            
+                <a href="tag/symfony" rel="tooltip" title="View posts tagged with &quot;symfony&quot;"><span class="label label-info">symfony</span></a>
+            
+        
+
+
+    </div>
+    <div class="span4 column">
+        <p class="pull-right">
+            
+            <a href="/blog/2010/03/28/seytan-pengueni-durterse" title="Şeytan, Pengueni Dürterse"><i class="icon-chevron-left"></i></a>
+            
+            
+            <a href="/blog/2010/04/10/lokasyon-bazli-servisler-yaratmak" title="Lokasyon Bazlı Servisler Yaratmak"><i class="icon-chevron-right"></i></a>
+            
+        </p>
+    </div>
+</div>
+
+<div class="row">
+  <div class="span12">
+    <hr style="margin: 30px 0 30px 0"/>
+
+      <strong>NoSQL Nedir? </strong>
+NoSQL, ilişkisel olmayan bir veritabanıdır. SQL dili kullanmadan Map-Reduce kavramı ile sorgulama yapılır. Map ve Reduce, aslında fonksiyonel programlamada sıkça kullanılan iki fonksiyondur. Excel buna güzel bir örnektir.
+
+Gün geçmiyorki tarih tekerrür etmesin. NoSQL kelimesini birkaç blogta okuduğum vakit Yazılım Mimarı olan 40-45 yaşlarında bir büyüğüme bundan söz ettim. O da, aslında bunun yıllar önce kullanılan Berkley_DB'den başka birşey olmadığını söyledi. Berkley_DB aynı anda çalışan binlerce iş parçacığının(thread) 256 terabyte büyüklüğüde bir veritabanına erişebilmesini mümkün kılar. SQLite'ta BerkleyDB'ye benzer bir yapıya sahiptir. Ama biz SQLite'ı küçük işlerde kullanırız!. Biraz kafa karıştırıcı olduğunu biliyorum. Burada ilginç bir döngü var? Internet mozaik bir yapıdadır. Ve dağınıktır. Bu dağınık yapıyı Google'ın yaptığı gibi indekslemek (tabiri caizse tüm interneti indirmek isterseniz), dünyanın en büyük ve en iyi ilişkilsel veritabanını kanalize olmuş Oracle bile yetersiz kalacaktır.
+
+<strong>Peki neden?</strong>
+<ol>
+	<li> İlişkisel veritabanları, yazma hakkı olan bir sunucu üzerinde koşar. Ana sunucuya birşey olması durumunda slave makinelerden biri master'a çevirilir ve yola devam edilir. Burada ki veritabanına gelen yazma isteklerini düşünebiliyor musunuz?</li>
+	<li> Veritabanı büyüdüğünde yedekleme gibi işlemler (bakım) sorun olmaya başlar.</li>
+	<li> Replikasyona dair sorunlar yaşayabilirsiniz.</li>
+	<li> Google'ın 1 milyon makinesi olduğu varsayılıyor! Bu kadar makinelerin yarısının aynı anda tek bir makineye yazma isteği bulunduğunu düşünürsek durum daha net anlaşılabilir.</li>
+</ol>
+Google, startup döneminde, bir mühendislik şirketi gibi davrandı ve ihtiyaçlarını iyi analiz etti. 10.000$'lık sunucular almak yerine 500$'lık ucuz makineler satın aldı. Ve bu makinelerin kısa ömürlü ve her an patlayacağını bilerek kodlarını yazdı. Ve BigTable denilen (Hadoop bunun açık kaynak halidir) Map ve Reduce fonksiyonları ile sorgulamayı sağlayan bir mimari kurdu. Bu mimarinin en önemli özelliği; makinelerden biri göçse bile, sistemin çalışmaya devam etmesidir. Her kaydın 3-5 ayrı sunucuda kopyası bulunmaktadır. Bu şekilde web için en uygun devasa bir Mosaic oluşturdular.
+
+Peki NoSQL konusuna giriş yaptık. Fakat bu seferde karşımıza birden fazla NoSQL türü çıkacak;
+<ol>
+	<li> Key/Value database (Redis, MemcachedDB vb..)</li>
+	<li> Document Oriented database. (MongoDB, CouchDB)</li>
+	<li> Object database (db4o)</li>
+	<li> Graph databse (neo4j)</li>
+	<li> Tabular (bigtable, hadoop)</li>
+</ol>
+Biz bu türlerden, belge yönelimli veritabanları konusu üzerinede duracağız. Belge yönelimli veritabanları, nesne yönelimli ve ilişkisel veritabanlarının alt katmanıdır. Yukarıda saydığım veritabanlarının birbirinden farkını ve merak ettiğiniz diğer konuları <a href="http://en.wikipedia.org/wiki/NoSQL">Vikipedi</a>'den okuyabilirsiniz. MongoDB'yi neden tercih ettiğime dair bilgilerine ise; <a href="http://www.mongodb.org/display/DOCS/Benchmarks">benchmark</a> testlerinden ve <a href="http://www.mongodb.org/display/DOCS/Comparing+Mongo+DB+and+Couch+DB">kıyaslama tablosundan</a> edinebilirsiniz.<!--more-->
+
+<strong>MongoDB'yi Denemek İçin;</strong>
+Eğer yukarıdaki bilgiler sizi tatmin etmedi ve MongoDB'yi biraz kurcalamak istiyorsanız ve zamanım yok makineye kurmadan denemek istiyorum diyorsanız; online olarak <a href="http://try.mongodb.org">şuradan</a> deneyebilmeniz mümkün.
+
+<strong>MongoDB sunucusunun çalıştırmak için;</strong>
+<pre lang="bash">mongod --dbpath=/data/mongo
+</pre>
+<strong>MongoDB'nin Ubuntu'ya Kurulumu</strong>
+MongoDB'nin Ubuntuya nasıl kurulduğunu anlatacak olsamda diğer işletim sistemleri ve linux dağıtımlarına nasıl kurulacağını <a href="http://www.mongodb.org/display/DOCS/Quickstart">şuradan</a> öğrenebilirsiniz.
+APTITUDE ile kurmak için; aşağıdaki dağıtımınız için uygun olan paket kaynak adresini seçerek <strong>/etc/apt/sources.list</strong> dosyasına kopyalamanız yeterlidir.
+<pre lang="bash"># for Ubuntu Lucid (10.4) (built using a prerelease installation)
+deb http://downloads.mongodb.org/distros/ubuntu 10.4 10gen
+
+# for Ubuntu Karmic (9.10)
+deb http://downloads.mongodb.org/distros/ubuntu 9.10 10gen
+
+# for Ubuntu Jaunty (9.4)
+deb http://downloads.mongodb.org/distros/ubuntu 9.4 10gen</pre>
+ve sonrasında da aşağıdaki komutları çalıştırmanız yeterlidir.
+<pre lang="bash">sudo aptitude update
+sudo aptitude install mongodb-stable
+# ya da
+sudo aptitude install mongodb-unstable
+# ya da
+sudo aptitude install mongodb-snapshot</pre>
+<pre lang="bash"># install dependicies for Ubuntu 9.04 ve 9.10
+sudo apt-get -y install tcsh git-core scons g++
+sudo apt-get -y install libpcre++-dev
+                      libboost-dev libreadline-dev
+                      xulrunner-1.9.1-dev
+
+# get source
+git clone git://github.com/mongodb/mongo.git
+# build
+scons
+# install
+sudo scons --prefix=/opt/mongo install</pre>
+Görüldüğü üzere kurulum son derece basit. Derlenerek kurulum işleminde yapılması gereken başlangıç betiği hazırlamak.
+<pre lang="ruby">#!/usr/bin/env ruby -w
+# mongo ;; 2010 (cc) Jan Riethmayer
+# This work is licensend under a Creative Commons Attribution 3.0 license.
+
+require 'optparse'
+options = {}
+
+optparse = OptionParser.new do|opts|
+  opts.banner = &lt;&lt;-BANNER
+Usage: sudo ./mongo [options]
+BANNER
+
+  options[:dbpath] = "/data/mongodb/"
+  opts.on( '-d', '--dbpath', 'Select DB path. Defaults to /data/mongodb/' ) do |path|
+    options[:dbpath] = path
+  end
+
+  options[:port] = "27017"
+  opts.on( '-p', '--port PORT', 'Listening to port 27017 by default' ) do |port|
+    options[:port] = port
+  end
+
+  options[:fork] = false
+  opts.on( '-f', '--fork', 'Run as daemon' ) do
+    options[:fork] = true
+  end
+
+  options[:logpath] = "/var/log/mongodb.log"
+  opts.on( '-l', '--logfile FILE', 'Defaults to /var/log/mongodb.log' ) do |file|
+    options[:logpath] = file
+  end
+
+  opts.on( '-h', '--help', 'Display this screen' ) do
+    puts opts
+    exit
+  end
+end
+
+# Parse the command-line. Remember there are two forms
+# of the parse method. The 'parse' method simply parses
+# ARGV, while the 'parse!' method parses ARGV and removes
+# any options found there, as well as any parameters for
+# the options.
+optparse.parse!
+
+class Go
+  attr_accessor :opts
+
+  def initialize(opts)
+    @opts = opts
+  end
+
+  def start
+    puts "Starting on port #{@opts[:port]} with dbpath #{@opts[:dbpath]}"
+    puts "Running as Daemon" if @opts[:fork]
+    puts "Writing to logpath /var/log/mongodb.log"
+    path = "--dbpath #{@opts[:dbpath]}"
+    port = "--port #{@opts[:port]}"
+    log = "--logpath #{@opts[:logpath]} --logappend"
+    fork = "#{@opts[:fork] ? '--fork' : ''}"
+    params = [path, port, log, fork].join(" ")
+    result = %x{ ./mongodb/bin/mongod #{ params } }
+    puts result
+  end
+
+  def stop
+    process = %x{ ps -o pid,command ax | grep mongod }
+    found = false
+    matcher = process.scan(/(\d+).+?bin.+?mongod.+?--fork/) do |pid|
+      found = true
+      puts "Killing process #{pid}"
+      %x{ kill -2 #{pid} }
+    end
+    puts "No mongod process found" unless found
+  end
+end
+
+go = Go.new(options)
+
+case ARGV[0]
+  when /start/ : go.start
+  when /stop/ : go.stop
+  else
+  raise ArgumentError.new("mongo (start|stop) or mongo -h for help.")
+end</pre>
+Yukarıdaki dosyayı <strong>/etc/init.d/mongo</strong> şeklinde kaydetmek gerekiyor.
+
+<strong>PHP Kurulumu</strong>
+<pre lang="bash">sudo pecl install mongo
+</pre>
+PHP için monog eklentisinin hatasız bir şekilde derlenebilmesi için bilgisayarınızda <strong>phpize</strong> yüklü olmalıdır. Derleme işleminden sonra, php.ini dosyanıza;
+<pre lang="ini">extension=mongo.so
+</pre>
+ekledikten sonra kurulum işlemi tamamlanmış olur.
+
+Artık PHP mongo ile konuşabilecek durumda. PHP'nin sınıfları ile ilgi detaylı bilgiye <a href="http://tr.php.net/mongo">php.net/mongo</a> adresinden ulaşabilirsiniz.
+
+PHPMyAdmin gibi bir yönetim arabirimi arıyorsanız, <a href="http://www.phpmoadmin.com/">PHPMoAdmin</a> tam size göre.
+
+<strong>PHP Frameworkleri</strong>
+Birçok popüler PHP framework'ünün MongoDB için ActiveRecord patternine uygun yazılmış eklentisi mevcut. Gelin bunlara bir göz atalım;
+<strong>Zend Framework</strong>
+<ul>
+	<li><a href="http://framework.zend.com/wiki/display/ZFPROP/Zend_Nosql_Mongo+-+Valentin+Golev">Zend_Nosql_Mongo</a> Zend firması tarafından geliştirilen sınıf.</li>
+	<li><a href="http://github.com/coen-hyde/Shanty-Mongo">Shanty Mongo</a> ise diğer bir sınıf.</li>
+</ul>
+<strong>CakePHP</strong>
+<a href="http://github.com/ichikaway/mongoDB-Datasource/downloads">MongoDB Datasource</a> sınıfı.
+
+<strong>Kohana</strong>
+<a href="http://github.com/Wouterrr/mangodb">Mango</a> ise Kohana için ActiveRecord paternini kullanan bir sınıf.
+
+<strong>Symfony</strong>
+Symfony için Jason Mooberry tarafından yazılan makalenin, <a href="http://blog.jasonmooberry.com/2009/08/mongodb-and-symfony-yes-part-1-inserts/">1. bölümü</a> ve <a href="http://blog.jasonmooberry.com/2009/08/mongodb-and-symfony-yes-part-2-simple-queries/">2. bölümünden</a> bilgi edinebilirsiniz.
+
+<strong>Kütüphaneler</strong>
+<ul>
+	<li><a href="http://github.com/crodas/ActiveMongo">ActiveMongo</a> güzel bir kütüphane. Bu kütüphaneye başlangıç yapmak için ise <a href="http://crodas.org/activemongo.php">şu makaleye</a> bakabilirsiniz.</li>
+	<li><a href="http://code.google.com/p/mongodb-morph/">Morph Kütüphanesi</a></li>
+</ul>
+<strong>PHP ile İlgili Diğer Makaleler</strong>
+<ul>
+	<li><a href="http://technosophos.com/content/mongodb-5-things-every-php-developer-should-know-about-mongodb">http://technosophos.com/content/mongodb-5-things-every-php-developer-should-know-about-mongodb</a></li>
+	<li><a href="http://www.businessinsider.com/how-we-use-mongodb-2009-11">
+http://www.businessinsider.com/how-we-use-mongodb-2009-11</a></li>
+	<li><a href="http://www.lafermeduweb.net/billet/nosql-mongodb-et-php-premiere-approche-781.html">http://www.lafermeduweb.net/billet/nosql-mongodb-et-php-premiere-approche-781.html</a></li>
+	<li><a href="http://blog.boxedice.com/2009/07/25/choosing-a-non-relational-database-why-we-migrated-from-mysql-to-mongodb">http://blog.boxedice.com/2009/07/25/choosing-a-non-relational-database-why-we-migrated-from-mysql-to-mongodb</a></li>
+	<li><a href="http://www.phpclasses.org/blog/post/118-Developing-scalable-PHP-applications-using-MongoDB.html">http://www.phpclasses.org/blog/post/118-Developing-scalable-PHP-applications-using-MongoDB.html</a></li>
+</ul>
+MongoDB gerçekten çok iyi belgelenmiş ve birçok web çatısı tarafından desteklenen harika bir araç. Bu konuda ki paylaşımlarınızı bekliyorum. :)
+
+
+      <!--
+    <div class="pagination">
+      <ul>
+      
+        <li class="prev"><a href="/blog/2010/03/28/seytan-pengueni-durterse" title="Şeytan, Pengueni Dürterse">&larr; Previous</a></li>
+      
+        <li><a href="/archive.html">Archive</a></li>
+      
+        <li class="next"><a href="/blog/2010/04/10/lokasyon-bazli-servisler-yaratmak" title="Lokasyon Bazlı Servisler Yaratmak">Next &rarr;</a></li>
+      
+      </ul>
+    </div>-->
+    <p>&nbsp;</p>
+    
+  </div>
+  
+</div>
+
+
+        </div>
+    </div>
+</div>
+<!-- /container -->
+
+
+<footer class="footer">
+    <div class="container">
+        <p class="pull-right"> | <a href="#">Başa Dön</a> | </p>
+
+        <p>
+            &copy; 2007 - 2013 Hasan Ozgan<br/>
+            <small>En son güncellenme tarihi: Kasım 04, 2013</small>
+        </p>
+
+    </div>
+</footer>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"></script>
+<script src="/assets/themes/heves/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/assets/themes/heves/js/jquery.followbox.min.js" type="text/javascript"></script>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1491715-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>
+

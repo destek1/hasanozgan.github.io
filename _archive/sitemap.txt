@@ -1,0 +1,184 @@
+
+http://hasanozgan.com/archive/index.html
+http://hasanozgan.com/archive.html
+http://hasanozgan.com/atom.xml
+http://hasanozgan.com/belgeler/scala-rehberi/index.html
+http://hasanozgan.com/belgeler/tasarim-desenleri/index.html
+http://hasanozgan.com/belgeler/tasarim-prensipleri/index.html
+http://hasanozgan.com/categories.html
+http://hasanozgan.com/hakkinda/index.html
+http://hasanozgan.com/index.html
+http://hasanozgan.com/pages.html
+http://hasanozgan.com/robots.txt
+http://hasanozgan.com/rss.xml
+http://hasanozgan.com/sitemap.txt
+http://hasanozgan.com/tags.html
+http://hasanozgan.com/tag/amaç/index.html
+http://hasanozgan.com/tag/blog/index.html
+http://hasanozgan.com/tag/Diğer/index.html
+http://hasanozgan.com/tag/hakkimda/index.html
+http://hasanozgan.com/tag/password generator/index.html
+http://hasanozgan.com/tag/pwgen/index.html
+http://hasanozgan.com/tag/kissa/index.html
+http://hasanozgan.com/tag/kissa.be/index.html
+http://hasanozgan.com/tag/shorten/index.html
+http://hasanozgan.com/tag/tinyurl/index.html
+http://hasanozgan.com/tag/twitter/index.html
+http://hasanozgan.com/tag/url/index.html
+http://hasanozgan.com/tag/*nix/index.html
+http://hasanozgan.com/tag/cron/index.html
+http://hasanozgan.com/tag/daemon/index.html
+http://hasanozgan.com/tag/linux/index.html
+http://hasanozgan.com/tag/pear/index.html
+http://hasanozgan.com/tag/php/index.html
+http://hasanozgan.com/tag/system/index.html
+http://hasanozgan.com/tag/unix/index.html
+http://hasanozgan.com/tag/activemongo/index.html
+http://hasanozgan.com/tag/kohana/index.html
+http://hasanozgan.com/tag/mango/index.html
+http://hasanozgan.com/tag/mongodb/index.html
+http://hasanozgan.com/tag/morph/index.html
+http://hasanozgan.com/tag/nosql/index.html
+http://hasanozgan.com/tag/symfony/index.html
+http://hasanozgan.com/tag/ubuntu/index.html
+http://hasanozgan.com/tag/zend/index.html
+http://hasanozgan.com/tag/geolocation/index.html
+http://hasanozgan.com/tag/html5/index.html
+http://hasanozgan.com/tag/ip2location/index.html
+http://hasanozgan.com/tag/latitude/index.html
+http://hasanozgan.com/tag/longitude/index.html
+http://hasanozgan.com/tag/mysql/index.html
+http://hasanozgan.com/tag/radius/index.html
+http://hasanozgan.com/tag/search/index.html
+http://hasanozgan.com/tag/zipcode/index.html
+http://hasanozgan.com/tag/ecplise/index.html
+http://hasanozgan.com/tag/hibernate/index.html
+http://hasanozgan.com/tag/java/index.html
+http://hasanozgan.com/tag/maven2/index.html
+http://hasanozgan.com/tag/sitemesh/index.html
+http://hasanozgan.com/tag/spring/index.html
+http://hasanozgan.com/tag/acegi/index.html
+http://hasanozgan.com/tag/ehcache/index.html
+http://hasanozgan.com/tag/framework/index.html
+http://hasanozgan.com/tag/ioc/index.html
+http://hasanozgan.com/tag/jsp/index.html
+http://hasanozgan.com/tag/jstl/index.html
+http://hasanozgan.com/tag/log4j/index.html
+http://hasanozgan.com/tag/maven/index.html
+http://hasanozgan.com/tag/mvc/index.html
+http://hasanozgan.com/tag/quartz/index.html
+http://hasanozgan.com/tag/tiles/index.html
+http://hasanozgan.com/tag/url-rewrite/index.html
+http://hasanozgan.com/tag/webflow/index.html
+http://hasanozgan.com/tag/android/index.html
+http://hasanozgan.com/tag/clockworkmod/index.html
+http://hasanozgan.com/tag/froyo/index.html
+http://hasanozgan.com/tag/goldcard/index.html
+http://hasanozgan.com/tag/htc desire/index.html
+http://hasanozgan.com/tag/htc sense/index.html
+http://hasanozgan.com/tag/reflash/index.html
+http://hasanozgan.com/tag/unrevoked/index.html
+http://hasanozgan.com/tag/update.zip/index.html
+http://hasanozgan.com/tag/akka/index.html
+http://hasanozgan.com/tag/availability/index.html
+http://hasanozgan.com/tag/cloud computing/index.html
+http://hasanozgan.com/tag/distributed computing/index.html
+http://hasanozgan.com/tag/paralel computing/index.html
+http://hasanozgan.com/tag/scala/index.html
+http://hasanozgan.com/tag/scalability/index.html
+http://hasanozgan.com/tag/stability/index.html
+http://hasanozgan.com/tag/lift/index.html
+http://hasanozgan.com/tag/programlama/index.html
+http://hasanozgan.com/tag/sbt/index.html
+http://hasanozgan.com/tag/eclipse/index.html
+http://hasanozgan.com/tag/eclipsify/index.html
+http://hasanozgan.com/tag/scala ide/index.html
+http://hasanozgan.com/tag/scalate/index.html
+http://hasanozgan.com/tag/servlet/index.html
+http://hasanozgan.com/tag/ssp/index.html
+http://hasanozgan.com/tag/gökhan goralı/index.html
+http://hasanozgan.com/tag/maxime levesque/index.html
+http://hasanozgan.com/tag/mihrimah sultan/index.html
+http://hasanozgan.com/tag/onur yalazı/index.html
+http://hasanozgan.com/tag/squeryl/index.html
+http://hasanozgan.com/tag/c programming language/index.html
+http://hasanozgan.com/tag/dennis ritchie/index.html
+http://hasanozgan.com/tag/e-ticaret/index.html
+http://hasanozgan.com/tag/internet/index.html
+http://hasanozgan.com/tag/türkiye/index.html
+http://hasanozgan.com/tag/turkiye/index.html
+http://hasanozgan.com/tag/oyku/index.html
+http://hasanozgan.com/tag/aziz nesin/index.html
+http://hasanozgan.com/tag/du bakalim nolucak/index.html
+http://hasanozgan.com/tag/first-class citizen/index.html
+http://hasanozgan.com/tag/currying/index.html
+http://hasanozgan.com/tag/closure/index.html
+http://hasanozgan.com/tag/lambda express/index.html
+http://hasanozgan.com/tag/monads/index.html
+http://hasanozgan.com/tag/high-order function/index.html
+http://hasanozgan.com/tag/functional programming/index.html
+
+http://hasanozgan.com/blog/2013/03/30/fonksiyonel-programlama
+http://hasanozgan.com/blog/2013/03/22/du-bakalim-nolecak
+http://hasanozgan.com/blog/2012/07/22/bir-startup-masali-bezirgan-ve-origami-ustasi
+http://hasanozgan.com/blog/2012/02/01/is-ilani-java-developer
+http://hasanozgan.com/blog/2011/10/13/buyuk-ustaya-saygiyla-1941-2011
+http://hasanozgan.com/blog/2011/03/16/squerylin-yaraticisi-maxime-levesque-ile-bulustuk
+http://hasanozgan.com/blog/2011/02/10/scala-gelistirme-ortami-ve-ornek-web-uygulamasi
+http://hasanozgan.com/blog/2011/02/06/scalaya-giris
+http://hasanozgan.com/blog/2010/12/31/yeni-yilda-olceklenebilirlik-uzerine-planlar
+http://hasanozgan.com/blog/2010/12/21/javatar-kavanoz-bukme-procesi
+http://hasanozgan.com/blog/2010/09/11/htc-desire-icin-android-2-2-froyo-guncellemesi
+http://hasanozgan.com/blog/2010/08/29/bir-web-catisi-framework-anatomisi
+http://hasanozgan.com/blog/2010/08/09/java-dunyasinda-web-surfing-ve-spring-framework
+http://hasanozgan.com/blog/2010/08/01/scala-turkiye-yayinda
+http://hasanozgan.com/blog/2010/08/01/java-berbattir
+http://hasanozgan.com/blog/2010/07/31/goc-zamani-ve-limonlu-soda-keyfi
+http://hasanozgan.com/blog/2010/04/10/lokasyon-bazli-servisler-yaratmak
+http://hasanozgan.com/blog/2010/04/06/php-ve-nosql-mongodb
+http://hasanozgan.com/blog/2010/03/28/seytan-pengueni-durterse
+http://hasanozgan.com/blog/2010/03/22/zamani-sahiplenmek
+http://hasanozgan.com/blog/2010/03/12/ninja-ve-samuray
+http://hasanozgan.com/blog/2010/01/13/sanal-pos-kutuphanesi
+http://hasanozgan.com/blog/2010/01/09/linux-dosya-indeksleri-inode-ve-sistem-mimarisi
+http://hasanozgan.com/blog/2009/12/03/pratisyen-hekim-veya-kalp-cerrahi-olmak
+http://hasanozgan.com/blog/2009/10/21/friendfeed-list-editor-ffeditcom-v01-yayinda
+http://hasanozgan.com/blog/2009/10/07/ozgur-internet-bildirgesi-imza-kampanyasi
+http://hasanozgan.com/blog/2009/09/16/temiz-php-dunyasi
+http://hasanozgan.com/blog/2009/09/16/rest-gelecegin-web-mimarisi
+http://hasanozgan.com/blog/2009/09/05/macbook-uzerine-ubuntu-904-kurulumu
+http://hasanozgan.com/blog/2009/08/02/yazilim-gelistirme-surecleri-1
+http://hasanozgan.com/blog/2009/07/27/amerikada-caylak-bir-yazilim-mimari
+http://hasanozgan.com/blog/2009/05/19/tek-gozlu-devlerin-yonettigi-utopik-fisiltilar-korosu
+http://hasanozgan.com/blog/2009/04/05/microsoft-net-ve-girisimcilik
+http://hasanozgan.com/blog/2009/04/05/kissabe-v3-yayinda
+http://hasanozgan.com/blog/2009/03/08/hakkimda-7-sey
+http://hasanozgan.com/blog/2009/03/02/icimdeki-internet-aski-bambaska
+http://hasanozgan.com/blog/2009/03/01/yazilim-gelistiricisinin-serefi
+http://hasanozgan.com/blog/2008/12/04/php6-da-olmasi-gereken-ozellikler
+http://hasanozgan.com/blog/2008/11/30/web-uygulama-gelistiricileri-icin-firefox-eklentileri
+http://hasanozgan.com/blog/2008/11/30/kendime-bir-dost-asus-eee-pc-1000h-edindim
+http://hasanozgan.com/blog/2008/10/02/php-ile-dinamik-method-cagrilari
+http://hasanozgan.com/blog/2008/09/03/google-bir-arama-motorudur
+http://hasanozgan.com/blog/2008/09/02/url-kissalastirma-hizmeti-kissabe
+http://hasanozgan.com/blog/2008/09/02/parola-yaratma-hizmeti-pwgennet
+http://hasanozgan.com/blog/2008/09/02/basarisiz-bir-girisim-hikayesi
+http://hasanozgan.com/blog/2008/08/29/web-20-trendleri
+http://hasanozgan.com/blog/2008/08/21/qualityrank-web-analiz-olcum-ve-stratejileri
+http://hasanozgan.com/blog/2008/07/24/hello-world-2
+http://hasanozgan.com/blog/2008/05/03/yazilim-ve-oyun-kardesligi
+http://hasanozgan.com/blog/2008/03/16/uretim-ekonomisinin-cokusu
+http://hasanozgan.com/blog/2008/02/09/gelecegin-uygulama-mimarisi
+http://hasanozgan.com/blog/2008/02/08/acik-sirket-open-company-yaklasimi
+http://hasanozgan.com/blog/2007/11/11/adim-adim-ruby-2
+http://hasanozgan.com/blog/2007/09/29/distributed-dos-saldirisi-ve-yapilmasi-gerekenler
+http://hasanozgan.com/blog/2007/09/21/adim-adim-ruby-1
+http://hasanozgan.com/blog/2007/09/06/46
+http://hasanozgan.com/blog/2007/06/15/ilkelerim
+http://hasanozgan.com/blog/2007/06/14/linuxtan-windowsa-goc-migration
+http://hasanozgan.com/blog/2007/06/09/proje-yonetim-sanati-ve-insan-faktoru
+http://hasanozgan.com/blog/2007/06/03/sunum-nasil-yapilmali
+http://hasanozgan.com/blog/2007/05/20/semantic-web-nam-i-diger-web-30
+http://hasanozgan.com/blog/2007/02/28/turkiyede-sosyal-muhendislik
+http://hasanozgan.com/blog/2007/01/31/bir-sql-hikayesi
+http://hasanozgan.com/blog/2006/01/21/hello-world
