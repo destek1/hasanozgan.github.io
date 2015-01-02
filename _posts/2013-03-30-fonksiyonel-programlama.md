@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fonksiyonel Programlama
+title: AFonksiyonel Programlama
 
 status: publish
 type: post
