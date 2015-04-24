@@ -23,7 +23,7 @@ Saygıyla anıyorum!..
 
 int main()
 {
-    printf("goodbye, dad\n");
+    printf("goodbye, master\n");
     return 0;
 }
 
