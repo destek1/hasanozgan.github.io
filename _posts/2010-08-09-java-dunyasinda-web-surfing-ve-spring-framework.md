@@ -31,11 +31,11 @@ Framework seçme işlemiyle aynı paralel zamanda IDE'de araştırmaya başladı
 
 Derleme işlerinde ise eskiden Ant kullanan biri olsamda Maven2'yi tercih ettim. Maven ile tanışmam Scala daha doğrusu Lift framework vesile oldu. Paket bağımlılıkları ve deployment sürecini kolaylaştırması nedeniyle hemen kanım kaynadı. Archetype'lar sayesinde bir proje iskeleti hazırlamak çok kolay oluyor.
 
-Spring framework'u seçtikten sonra, template engine armaya başladım. Önce Spring'te JSP örnekleri görünce ısınamadım. Ben JSF'teki gibi tag kütüphaneleri oluşturabileceğim bir template engine arıyordum. JSF ile Spring'i aynı çatıda kullanmayı denediysemde beceremedim. Daha sonra birşeyleri yanlış yaptığıma karar vererek durumumu tekrar inceledim. Ve JSP örneklerindeki JSTL teknolojisini keşfettim. JSTL tag libarary olmasına rağmen benim için yeterli değildi, layout yada master page gibi bir mimari içermiyordu. Araştırmalarım sırasında önce <a href="http://tiles.apache.org/">Apache Tiles</a> ile hedefe ulaştığımı düşünsem de, sonra <a href="http://www.opensymphony.com/sitemesh/">Sitemesh</a> ile bu işleri daha temiz bir şekilde çözelbildiğimi farkettim.
+Spring framework'u seçtikten sonra, template engine armaya başladım. Önce Spring'te JSP örnekleri görünce ısınamadım. Ben JSF'teki gibi tag kütüphaneleri oluşturabileceğim bir template engine arıyordum. JSF ile Spring'i aynı çatıda kullanmayı denediysemde beceremedim. Daha sonra birşeyleri yanlış yaptığıma karar vererek durumumu tekrar inceledim. Ve JSP örneklerindeki JSTL teknolojisini keşfettim. JSTL tag libarary olmasına rağmen benim için yeterli değildi, layout yada master page gibi bir mimari içermiyordu. Araştırmalarım sırasında önce <a href="http://tiles.apache.org/">Apache Tiles</a> ile hedefe ulaştığımı düşünsem de, sonra <a href="http://www.sitemesh.org/">Sitemesh</a> ile bu işleri daha temiz bir şekilde çözelbildiğimi farkettim.
 
 ORM ve Persistence aracı olarak tüm java kullanıcılarının tek geçtiği <a href="http://www.hibernate.org">Hibernate</a>'i kullanmaya karar verdim.
 
-Son olarak güvenlik ve yetkinlendirme konularında <a href="http://www.acegisecurity.org">Acegi</a>, zaman ayarlı işler için ise <a href="http://http://www.quartz-scheduler.org/">Quartz</a> kullanmaya karar verdim.
+Son olarak güvenlik ve yetkinlendirme konularında <a href="http://www.acegisecurity.org">Acegi</a>, zaman ayarlı işler için ise <a href="http://www.quartz-scheduler.org/">Quartz</a> kullanmaya karar verdim.
 
 Bir sonraki yazımda spring framework ve söylediğim araçların Maven kullanarak Spring çatısı altında nasıl entegre edeceğimizi konuşacağız. Tabii konularda ilerledikçe seviyemizi arttıracak ve vites büyülteceğiz.
 

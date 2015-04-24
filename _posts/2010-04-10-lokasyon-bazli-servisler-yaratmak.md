@@ -143,8 +143,6 @@ $strQuery = "SELECT * FROM PostalCodes " .
 
 Bulunan bu bölge kodlarına bağlı kayıtların çekilmesi ve sayfada listelenmesiyle işlem tamamlanmış olur.
 
-Bu örnekte kullanılan kodların Steven Brendtro'nun sitesinden kaldırılması ihtimaline karşılık <a href="http://phparchitect.org/tr/demos/lokasyon-bazli-servisler-yaratmak/geocalc/geocalc-php-1.2.tar_.gz">şuradan</a> kopyasına erişebilirsiniz.
-
 <p>
 Son olarak, <strong>HTML5</strong> ile birlikte gelen lokasyon öğrenme yönteminden söz ederek yazımı sonlandırmak istiyorum. Bu yöntemin, IP'den lokasyon bulmaktan farkı web tarayıcınızdan izin ister ama bunun karşılığında tarayıcının makinede varsa GPS'ten ya da çeşitli servislerden öğreneceği kaliteli bir latitude ve longitude değeri sunar.
 </p>
@@ -159,5 +157,3 @@ if (navigator.geolocation) {
     alert("Uzgunum, tarayicinizin cografik konum destegi henuz yok! HTML5 destegi olan bir tarayici kullanin.");
 }
 </pre>
-
-Ayrıca Google Maps ile entegre olarak bölge bilgisine ulaşabileceğiniz <a href="http://phparchitect.org/tr/demos/lokasyon-bazli-servisler-yaratmak/with_html5.php" target="demo">DEMO'ya şuradan</a> erişebilirsiniz.

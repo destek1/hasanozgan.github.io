@@ -18,7 +18,7 @@ meta:
   _wp_old_slug: ''
   _edit_last: '2'
 ---
-2011 yılına girerken, bu blogun daha aktif yazılarla karşınızda olmasını planlıyorum. Yazılarım arasında Java ve Scala dilleri kullanılarak gerçekleştirilen NoSQL uygulamaları, ve Distributed Computing kütüphanleri ve gerçek hayatta kullanılan mimariler <a href="http://scalability.in/web" target="_blank">Scalability.in/web</a> adresinde yer alacak. Bu adreste ise eskisi gibi yazılım ve bilişim dünyasındaki daha insancıl konular ve girişimcilik üzerine yazılar yazmaya devam edeceğim.
+2011 yılına girerken, bu blogun daha aktif yazılarla karşınızda olmasını planlıyorum. Yazılarım arasında Java ve Scala dilleri kullanılarak gerçekleştirilen NoSQL uygulamaları, ve Distributed Computing kütüphanleri ve gerçek hayatta kullanılan mimariler burada yer alacak.
 
 Eğer bu gibi konulardan hoşlanıyor ve/veya ilgileniyorsanız, aşağıda paylaştığım sunum ve makaleler ilginizi çekebilir.
 
