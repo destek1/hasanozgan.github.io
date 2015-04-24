@@ -18,11 +18,10 @@ Eskiden programlama dilleri benim amacımdı. Özellik C ve C++ dili konusunda u
 
 Yöntem olarak, "Özgür Yazılım Açık Kaynak" camianın yazılım geliştirme ve dağıtma şeklini ve felsefesini benimsedim. İnternet sektöründe hızlı olmalısınız bu sebeple çevik methodolojileri kullanmaya çalışırım.
 
-İşletim sistemi olarka, Linux(Ubuntu), Editör olarak (Vim), programlama dili olarak (Java, JavaScript, Scala, Ruby, PHP) kullanıyorum.
+İşletim sistemi olarak, Linux(Ubuntu), Editör olarak (Vim), programlama dili olarak (GO, Java, Scala, Ruby, PHP, Javascript) kullanıyorum.
 
-Benim ile ilgili daha fazla bilgi için aşağıdaki sayfalara da göz atabilirsiniz.
+Uzmanlık alanım, internet stratejileri ve dağınık web mimarileridir. 
 
- - [İlkelerim]({% post_url 2007-06-15-ilkelerim %})
- - [Hakkımda 7 Şey]({% post_url 2009-03-08-hakkimda-7-sey %})
+Benim ile ilgili daha fazla bilgi için [İlkelerim]({% post_url 2007-06-15-ilkelerim %}) sayfasına göz atabilirsiniz.
 
 Unutmayın, bu blog size birşey sunmaz. Herhangi bir vaadi yoktur! İşinize yarar birşeyler bulursanız ne güzel, bundan bende mutlu olurum. Sizi rahatsız eden birşeyler okuduğunuzda, düşüncelerimi unutun. Onlar gelecekteki benim için yazılmış şeyler, kafanıza takmayın ve boşverin, hayatınızın kontrolü sizin elinizde !...
