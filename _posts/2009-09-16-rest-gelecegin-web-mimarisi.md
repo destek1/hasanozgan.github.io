@@ -17,7 +17,7 @@ Bu güzel bilgiyi sizlerle de  paylaşayım dedim.  Yukarıdaki görselle her �
 
 <strong>Anahtar  Kelimer;</strong>
 <ul>
-	<li><a title="http://en.wikipedia.org/wiki/Representational_State_Transfer" href="http://en.wikipedia.org/wiki/Representational_State_Transfer">Restfull  teknolojisi</a></li>
+	<li><a title="http://en.wikipedia.org/wiki/Representational_State_Transfer" href="http://en.wikipedia.org/wiki/Representational_State_Transfer">Restful teknolojisi</a></li>
 	<li><a title="http://couchdb.apache.org/" href="http://couchdb.apache.org/">Document Oriented DB</a></li>
 	<li><a title="http://hadoop.apache.org/" href="http://hadoop.apache.org/">MapReduce</a></li>
 	<li><a title="http://code.quirkey.com/sammy/" href="http://code.quirkey.com/sammy/">JS  Router/Controller</a></li>
