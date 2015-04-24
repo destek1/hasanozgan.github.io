@@ -1,0 +1,200 @@
+---
+layout: post
+title: Fillerin, Büyük İskendere Karşı Taktikleri
+tags:
+- chess
+- Diğer
+- java
+- satranç
+status: publish
+type: post
+published: false
+meta:
+  _edit_last: '2'
+---
+Tarihin en büyük komutanlarından Büyük İskender'in hikayesini herkes bilir sanırım. Hindistana kadar tüm Anadolu topraklarını ve Afrika'nın bir bölümünü ele geçirip Hindistan sınırlarına kadar ilerler. Artık yorgun ve bitkin ordusunda söylenmeler başlamıştır, fakat o Hindistanı da almaya kararlıdır. Yağmurlu bir havada ordusu, fillerden oluşan bir orduyla karşılaşır ve bozguna uğrar. Neticede geri dönme eemri verir ve yolda zehirlenir.
+
+Buna benzer bir konuyu satranç tahtası üzerinde gerçekleştireceğiz. Görüşmeye gittiğim bir şirkette benden;
+
+<blockquote> <em>Beyaz bir fil ve siyah bir kral taşından oluşan boş bir satranç tahtasında, kaç hamlede filin (yerinden hiç oynamayan aslında herhangi bir taşta olabilir) kralı yiyeceğini ve bunu nasıl kodlayacağımı sordu.</em></blockquote>
+
+Gerçekten başarılı bir soru. Çünkü yazılımcının soruna nasıl yaklaşacağını ve kodu nasıl yazacağını canlı tanık oluyorsunuz. Bir probleme farklı bakış açılarından bakıp bakamadığını gözlemliyorsunuz. Bu açıdan bence çok yerinde bir soruydu. Bende cevabımı twitterdan gelen ilgili sorular doğrultusunda burada paylaşmayı uygun buldum.
+
+<strong>Güncelleme ve Özür:</strong>
+
+<em>Bu yazının bir önceki sürümünde aşağıdaki gibi bir paragraf yazmıştım.
+
+<del datetime="2012-11-27T07:19:52+00:00">Öncelikle oyun programlamanın ana konularından biri Constraint Programming'dir. Çok fazla oyun oynayan biri değilim ama mimarisini çıkartmışlığım olduğu için biliyorum. Neyse bu sebeple önce constraintleri çıkarttım.</del>
+
+Son yazdığım yazıların tarihlerine bakıldığında görüleceği üzere pek fazla yazı yazmıyorum. Yazdığım zamanlarda ise genelde çok uzun ve detaylı yazdığımı blogu takip edenler bilir. Ne nedir, neden gibi sorulara cevap arıyarak ilerlerim. Bu yazının biraz kalitesindeki düşüklüğün nedeni biraz aceleye gelmiş olması. Bu mülakat sorusunun kaynamasını istemediğim için hemen yayına aldım. Keşke almasaymışım, (: yazmayı planladığım bir diğer konuyla birbirine girmiş olduğunu aşağıdaki yorum ile farkettim. Constraint programlama ile 8 vezir problemine değinecektim. Fakat yukarıdaki sildiğim paragrafı unutmuşum. Ayrıca <a href="http://friendfeed.com/berkerpeksag/0307ff25/fillerin-buyuk-iskendere-kars-taktikleri" title="FriendFeed">şurada</a> da komik duruma düşmüşüm biraz. Yerli, yersiz tüm eleştirilere teşekkür ederim. Bundan sonra daha dikkatli olacağım. Friendfeed hesabım olmadığı için onlara buradan cevap vermiş olayım.
+
+</em> 
+
+Bu yazıyı sadece bir mülakat sorusu ve ona verilen cevap ile ilgilidir. Her ne kadar constraint programlama konusuna niyet edilmiş olsada, bir sonraki yazıya saklanmıştır. O zamana kadar, Google'a sorabilir yada şurada paylaştığım satrançtaki <a href="http://tr.wikipedia.org/wiki/Sekiz_vezir_bulmacas%C4%B1">"8 Vezir" bulmacasının</a> çözümü ile ilgili Ruby <a href="http://gecoder.rubyforge.org/examples/n-queens.html">kodunu</a> inceleyebilirsiniz. İlgilenenler için java programlama diliyle <a href="http://en.wikipedia.org/wiki/Backtracking">backtracking search algoritması</a> ile çözülen 8 vezir probleminin <a href="https://github.com/dredix/ChessPuzzles/tree/master/src/chesspuzzles/algorithms">kaynak kodlarına şuradan</a> ulaşabilirsiniz.
+
+<h3>Önce elimizdeki taşı tanıyalım.</h3>
+Fil (bishop) bilindiği üzere çarpraz giden bir taştır. Sadece bulunduğu karenin renginde ilerleyebilir. Bu nedenle başka bir karedeki taşa saldıramaz.
+
+<center>
+<a href="http://www.hasanozgan.com/files/2012/11/chess-bishop-1.jpg"><img class="aligncenter size-medium wp-image-788" title="chess-bishop-1" src="http://www.hasanozgan.com/files/2012/11/chess-bishop-1-300x300.jpg" alt="" width="300" height="300" /></a></center>&nbsp;
+
+Boş bir tahtada rakibin tek bir taşı olduğunu varsayarsak ve bu taşı, herhangi bir yere konduğunu kabul ederek ilerliyelim. Bu durumda sınırlarımızı (constraints) şu şekilde belirlemiş oluyoruz.
+<ol>
+	<li>İki taş aynı karede tanımlanırsa sıfır hamle.</li>
+	<li>Farklı renkli karelerde ise çözümsüzdür.</li>
+	<li>Eğer komşu karelerden birindeyse bir hamlede çözülür.</li>
+	<li>Eğer yukarılarından hiç biri değilse iki hamlede çözülür.</li>
+</ol>
+Yukarıdaki tanımları kod ile gösterelim.
+
+{% codeblock lang:java %}
+public int findNumberOfMoves(String squareOfBlack, String squareOfWhite)
+    throws Exception
+{
+  if (!canMoveable(squareOfBlack, squareOfWhite)) {
+    throw new Exception("Black can not move to white square");
+  }
+
+  if (isSameSquare(squareOfBlack, squareOfWhite)) {
+    return 0;
+  }
+
+  if (isNeighboring(squareOfBlack, squareOfWhite)) {
+    return 1;
+  }
+
+  return 2;
+}
+{% endcodeblock %}
+
+<h3>Karenin Rengi Nasıl Bulunur</h3>
+Aslında oldukça kolay bir yöntemi var. A1 yani 1.satır ve 1.sütun siyah kare ile başlar. Yani satır tek sayı ve sütun tek sayısı koyu renkli karedesiniz demektir. Bunun implementasyonuda tabii ki?
+
+{% codeblock lang:java %}
+public boolean isDarkSquare(String square) {
+  int columnIndex = findColumnIndex(square);
+  int rowIndex = findRowIndex(square);
+
+  return ((((columnIndex % 2) == 1) && ((rowIndex % 2) == 1)) || 
+          (((columnIndex % 2) == 0) && ((rowIndex % 2) == 0))) 
+                ? true : false;
+
+}
+{% endcodeblock %}
+
+<h3>Komşu Karelerin Bulunması</h3>
+Komşu kareleri bulmak için öncelikle tahtanın tüm karelerini sıralı olarak numaralandırmamız gerekiyor. Yani bu durumda E4 karesi 29. karede bulunuyor. İki taş arasındaki farkı bulduktan sonra 7 ve 9 modlarını alarak komşusu olup olamadığını bulabiliyoruz.
+
+{% codeblock lang:java %}
+public boolean isNeighboring(String squareOfBlack, String squareOfWhite) {
+
+  int positionOfBlack = findPositionIndex(squareOfBlack);
+  int positionOfWhite = findPositionIndex(squareOfWhite);
+
+  int factor = positionOfWhite - positionOfBlack;
+
+    return ((factor % 7) == 0) || ((factor % 9) == 0) ? true : false;
+}
+{% endcodeblock %}
+
+<h3>Şimdi gelin kodun tamamını görelim.</h3>
+Ayrıca kodu Github deposu üzerinden güncel halini görebilir, kod gözden geçirme yapabilir hatalar için pull request gönderebilirsiniz.
+
+<a href="https://github.com/hasanozgan/interview-questions">https://github.com/hasanozgan/interview-questions</a>
+
+{% codeblock lang:java %}
+class Bishop {
+
+    public int findNumberOfMoves(String squareOfBlack, String squareOfWhite) throws Exception
+    {
+        if (!canMoveable(squareOfBlack, squareOfWhite)) {
+            throw new Exception("Black can not move to white square");
+        }
+
+        if (isSameSquare(squareOfBlack, squareOfWhite)) {
+            return 0;
+        }
+        
+        if (isNeighboring(squareOfBlack, squareOfWhite)) {
+            return 1;
+        }      
+
+        return 2;
+    }
+
+    public boolean isSameSquare(String squareOfBlack, String squareOfWhite) {
+        return (findPositionIndex(squareOfBlack) == findPositionIndex(squareOfWhite)) ? true : false;
+    }
+
+    public boolean isNeighboring(String squareOfBlack, String squareOfWhite) {
+ 
+        int positionOfBlack = findPositionIndex(squareOfBlack);
+        int positionOfWhite = findPositionIndex(squareOfWhite);
+
+        int factor = positionOfWhite - positionOfBlack;
+
+        return ((factor % 7) == 0) || ((factor % 9) == 0) ? true : false;
+    }
+
+    public boolean canMoveable(String squareOfBlack, String squareOfWhite) {
+        return ((isDarkSquare(squareOfBlack) == isDarkSquare(squareOfWhite)) ? true : false);
+    }
+
+    public int findColumnIndex(String square) {
+        return (square.toUpperCase().charAt(0) - 'A') + 1;
+    }
+
+    public int findRowIndex(String square) {
+        return (square.charAt(1) - '0');
+    }
+
+    public int findPositionIndex(String square) {
+        int columnIndex = findColumnIndex(square);
+        int rowIndex = findRowIndex(square);
+
+        return ((rowIndex-1) * 8) + columnIndex;
+    }
+
+    public boolean isDarkSquare(String square) {
+        int columnIndex = findColumnIndex(square);
+        int rowIndex = findRowIndex(square);
+
+        return ((((columnIndex % 2) == 1) && ((rowIndex % 2) == 1)) || (((columnIndex % 2) == 0) && ((rowIndex % 2) == 0))) ? true : false;
+    }
+
+    public static void main(String[] args) {
+
+        Bishop bishop = new Bishop();
+        String positionOfBlack = "E4";
+        String positionOfWhite = "H1";
+
+        System.out.println(positionOfBlack + " -> "+ positionOfWhite + "\n--"); 
+        System.out.println(positionOfBlack + " square is " + (bishop.isDarkSquare(positionOfBlack) ? "DARK" : "LIGHT"));
+        System.out.println(positionOfWhite + " square is " + (bishop.isDarkSquare(positionOfWhite) ? "DARK" : "LIGHT"));
+
+        System.out.println("Can moveable? -> Answer: " + (bishop.canMoveable(positionOfBlack, positionOfWhite) ? "Yes" : "No")); 
+        
+        try {
+            int numberOfMoves = bishop.findNumberOfMoves(positionOfBlack, positionOfWhite);
+
+            System.out.println("Is neighboring? -> Answer: " + (bishop.isNeighboring(positionOfBlack, positionOfWhite) ? "Yes" : "No")); 
+
+            System.out.println("Number of moves -> Answer: " + numberOfMoves);
+        }
+        catch (Exception ex) {
+        }
+    }
+}
+{% endcodeblock %}
+
+<h3>Konsol Çıktısı ise şu şekilde:</h3>
+{% codeblock lang:bash %}
+$ java Bishop
+E4 -> H1
+--
+E4 square is LIGHT
+H1 square is LIGHT
+Can moveable? -> Answer: Yes
+Is neighboring? -> Answer: Yes
+Number of moves -> Answer: 1
+{% endcodeblock %}

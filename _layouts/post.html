@@ -1,0 +1,28 @@
+---
+layout: layout
+---
+
+<section class="content">
+  <h1>
+    <a href="{{ page.url }}">{{ page.title }}</a>
+  </h1>
+
+  <section class="byline">
+    {{ page.date | date: "%B %e, %Y" }}
+  </section>
+
+  {{ content }}
+
+  <!-- TODO: bio here -->
+  <section class="meta">
+
+	<span class='st_pocket_hcount' displayText='Pocket'></span>
+	<span class='st_twitter_hcount' displayText='Tweet'></span>
+	<span class='st_facebook_hcount' displayText='Facebook'></span>
+		
+	<script type="text/javascript">var switchTo5x=true;</script>
+	<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
+	<script type="text/javascript">stLight.options({publisher: "b75b39f7-6a5f-411c-be6a-e482390b549f", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+	
+  </section>
+</section>
