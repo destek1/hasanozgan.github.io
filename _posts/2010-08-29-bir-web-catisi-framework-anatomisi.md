@@ -15,6 +15,7 @@ tags:
 - maven
 - mvc
 - quartz
+- thymeleaf
 - sitemesh
 - spring
 - tiles
@@ -144,8 +145,8 @@ Hayatımın 2 yılı bu yapı üzerinde uygulamalar geliştiriken Java’ya geç
 </ul>
 </li>
 	<li><a href="http://hibernate.org">Hibernate</a></li>
-	<li><a href="http://www.opensymphony.com/sitemesh/">SiteMesh</a>, <a href="http://tiles.apache.org/">Tiles</a></li>
-	<li><a href="http://www.quartz-scheduler.org/">Quartz Scheduler</a></li>
+	<li><a href="http://wiki.sitemesh.org/wiki/display/sitemesh3/Home">SiteMesh</a>, <a href="http://tiles.apache.org/">Tiles</a></li>
+	<li><a href="http://quartz-scheduler.org/">Quartz Scheduler</a></li>
 	<li><a href="http://logging.apache.org/log4j/">Log4J</a></li>
 	<li><a href="http://maven.apache.org/">Maven</a></li>
 	<li><a href="http://ehcache.org/">EhCache</a></li>

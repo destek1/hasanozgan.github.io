@@ -11,7 +11,7 @@ published: true
 meta:
   _edit_last: '2'
 ---
-Az önce <a href="http://news.ycombinator.com">Hacker News</a>'te ilk öğrendiğim programlama dili C ve en sevdiğim işletim sistemi UNIX'in babası büyük usta <a href="http://cm.bell-labs.com/who/dmr/">Dennis Ritchie</a>'nin vefat ettiğini öğrendim. Değer verdiğim birkaç büyük ustadan biriydi kendisi. 
+Az önce <a href="http://news.ycombinator.com">Hacker News</a>'te ilk öğrendiğim programlama dili C ve en sevdiğim işletim sistemi UNIX'in babası büyük usta <a href="https://eksisozluk.com/entry/7495750">Dennis Ritchie</a>'nin vefat ettiğini öğrendim. Değer verdiğim birkaç büyük ustadan biriydi kendisi. 
 
 
 Saygıyla anıyorum!..
