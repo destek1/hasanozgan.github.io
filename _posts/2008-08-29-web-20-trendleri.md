@@ -11,8 +11,8 @@ meta:
 ---
 Web dünyasına yön veren projelerin, ilk kez hepsi bir yerde.<br/>
 <table cellspacing="0" cellpadding="0"><tr>
-<td valign="top"><a href="http://www.hasanozgan.com/wp-content/uploads/2008/08/web20_trends.jpg"><img class="alignnone size-medium wp-image-12" title="web20_trends" src="http://www.dahius.com/tr/wp-content/uploads/2008/08/web20_trends-300x280.jpg" alt="" width="300" height="280" /></a><br/>
-<a href="http://www.hasanozgan.com/wp-content/uploads/2008/08/ia_webtrends_2007_2_1024_768.gif"><img src="http://www.dahius.com/tr/wp-content/uploads/2008/08/ia_webtrends_2007_2_1024_768-300x225.gif" alt="" title="ia_webtrends_2007_2_1024_768" width="300" height="225" class="alignnone size-medium wp-image-22" /></a>
+<td valign="top"><a href="/files/2008/08/web20_trends.jpg"><img class="alignnone size-medium wp-image-12" title="web20_trends" src="/files/2008/08/web20_trends-300x280.jpg" alt="" width="300" height="280" /></a><br/>
+<a href="/files/2008/08/ia_webtrends_2007_2_1024_768.gif"><img src="/files/2008/08/ia_webtrends_2007_2_1024_768-300x225.gif" alt="" title="ia_webtrends_2007_2_1024_768" width="300" height="225" class="alignnone size-medium wp-image-22" /></a>
 </td>
 <td>
 <ul>
