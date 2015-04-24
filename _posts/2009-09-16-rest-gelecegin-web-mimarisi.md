@@ -1,13 +1,9 @@
-java---
+---
 layout: post
 title: ! 'REST: Geleceğin Web Mimarisi'
-tags:
-- Diğer
 status: publish
 type: post
 published: true
-meta:
-  _edit_last: '2'
 ---
 Dün şirketten arkadaşlarla molada iken, Ruby ile büyük  proje yazılıp yazılamadığı ile ilgili mini bir tartışma yapmıştık. Ruby'nin yavaşlığını bilen biri olarak, olmaz diye  bağıran adamların başında da ben geliyordum. Sonra Ruby haber gruplarında çokça  adını duyduğum <a href="http://www.sinatrarb.com/">Sinatra</a> isimli kütüphaneyi inceleyince Ruby ile yeni web mimarisi  ile çok güçlü web uygulamaları yazılabileceğini  gördüm.
 
