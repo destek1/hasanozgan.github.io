@@ -1,0 +1,26 @@
+<section class="sidebar">
+  <a href="/">
+      <img src="/images/avatar.png" height="75" width="75" class="avatar" />
+  </a>
+
+  <section class="name">
+    <a href="/">
+      <span id="fname">{{ site.name|split:' '|first }}</span>
+      <span id="lname">{{ site.name|split:' '|last }}</span>
+    </a>
+  </section>
+
+  <section class="meta">
+    <a href="https://tr.linkedin.com/in/hasanozgan" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <a href="https://github.com/{{ site.github }}" target="_blank"><i class="fa fa-github"></i></a>
+    <a href="https://twitter.com/{{ site.twitter }}" target="_blank"><i class="fa fa-twitter"></i></a> 
+    <a href="/atom.xml"><i class="fa fa-rss"></i></a>
+  </section>
+
+  <section class="sections">
+    <ul>
+      <li><a href="/hakkimda">hakkımda</a></li>
+      <li><a href="/">yazılar</a></li>
+    </ul>
+  </section>
+</section>
