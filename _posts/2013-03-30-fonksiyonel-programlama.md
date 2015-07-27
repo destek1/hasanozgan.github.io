@@ -48,9 +48,7 @@ Günümüz dünyasında web eş-zamanlı, dinamik ve ölçeklenebilir bir hale g
 
 Donanım mühendisleri *Moore Yasası* doğrultusunda, fiziksel sınırları zorlayarak sona geldiklerinde, paralel çekirdek mimarileri tasarlamaya ve geliştirmeye başladılar. Böylece hayatımıza 2, 4 vb... şeklinde çok çekirdekli, paralel çalışabilen işlemciler girdi. Hız için yapılan bu geliştirme beraberinde paralel programlama ihtiyacınıda beraberinde getirdi. 
 
-Paralel programlama yaparken dikkat edilmesi gereken en önemli konu deterministik olmasıdır. Yani aynı sonuçlar altında aynı durumu vermesidir. Web dünyasında bu nedenle durum tutmayan (**stateless**) önemlidir. Concurrent programlamada thread konuları söz konusu olduğunda değişmeyen veriler (**immutable**) kullanmak ve saf yani (**pure-function**) yan-etkisi olmayan fonksiyonlar kullanmak gereklidir. 
-
-İşte fonksiyonel programlama paradigması, deterministik bir programlama disiplinidir.
+Paralel programlama yaparken dikkat edilmesi gereken en önemli konu non-deterministik olmasıdır. Yani aynı sonuçlar altında aynı durumu vermesidir. Web dünyasında bu nedenle durum tutmayan (**stateless**) önemlidir. Concurrent programlamada thread konuları söz konusu olduğunda değişmeyen veriler (**immutable**) kullanmak ve saf yani (**pure-function**) yan-etkisi olmayan fonksiyonlar kullanmak gereklidir. 
 
 Bu yüzden paralel programlama algoritmaları ve çözümlerinin yolu mutlaka fonksiyonel programlama pratiklerinden geçer.
 
