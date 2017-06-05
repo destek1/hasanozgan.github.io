@@ -21,5 +21,7 @@ published: true
 	<li>Şeytanlık yapma!</li>
 	<li>İş ne olursa olsun, en iyisini yap!</li>
 	<li>Verilerle konuş</li>
+	<li>Zinciri Kırma (Bir hedef belirle ve 365 gun yap)</li>
+	<li>Kendine yatırım yap</li>
 	<li>Sürekli Gelişim (Kaizen; Tanımla, Planla, Çalıştır, Gözden Geçir)</li>
 </ul>
