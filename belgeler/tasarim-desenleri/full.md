@@ -1,3 +1,13 @@
+---
+layout: page
+title: Tasarım Desenleri
+tags: []
+status: publish
+type: page
+published: true
+meta:
+  _edit_last: '2'
+---
 ## Creational Patterns
 
 | Pattern | Description | Status |
