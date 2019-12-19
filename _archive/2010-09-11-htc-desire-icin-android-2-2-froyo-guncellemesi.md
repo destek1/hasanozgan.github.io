@@ -82,7 +82,7 @@ Eğer clockworkmod'da iken sorunsuz bir şekilde kurulum işlemini yaptıysanız
 <a href="http://theunlockr.com/2010/03/10/how-to-create-a-goldcard/">http://theunlockr.com/2010/03/10/how-to-create-a-goldcard/</a>
 <a href="http://developer.android.com/sdk/index.html">http://developer.android.com/sdk/index.html</a>
 <a href="http://www.knowyourcell.com/htc/htc-desire/desire-guides/474135/how_to_root_the_htc_desire.html">http://www.knowyourcell.com/htc/htc-desire/desire-guides/474135/how_to_root_the_htc_desire.html</a>
-<a href="http://www.androidturkiye.info/2010/07/09/htc-desire-icin-root-clockworkmod-recovery-dj-droid-v1-0/">http://www.androidturkiye.info/2010/07/09/htc-desire-icin-root-clockworkmod-recovery-dj-droid-v1-0/</a>
+<a href="https://www.andronova.net/android-teknik-bilgi/htc-desire-icin-root-clockworkmod-recovery-dj-droid-v10-h4228.html">https://www.andronova.net/android-teknik-bilgi/htc-desire-icin-root-clockworkmod-recovery-dj-droid-v10-h4228.html</a>
 <a href="http://wiki.cyanogenmod.com/index.php?title=Full_Update_Guide_-_HTC_Desire">http://wiki.cyanogenmod.com/index.php?title=Full_Update_Guide_-_HTC_Desire</a>
 <a href="http://www.dkszone.net/unrevoked-root-htc-android-phones-evo-4gdesiredroid-incredible">http://www.dkszone.net/unrevoked-root-htc-android-phones-evo-4gdesiredroid-incredible</a>
 <a href="http://www.koushikdutta.com/2010/02/clockwork-recovery-image.html">http://www.koushikdutta.com/2010/02/clockwork-recovery-image.html</a>
